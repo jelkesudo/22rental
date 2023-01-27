@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "name": "Početna",
+        "href": "index.html"
+    },
+    {
+        "id": 2,
+        "name": "Oprema",
+        "href": "categories.html"
+    }
+]
