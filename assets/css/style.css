@@ -387,22 +387,24 @@ nav {
   justify-content: flex-end !important;
 }
 
-.instaBigRez {
-  display: block;
-}
-
 #searchDo {
   background-color: #293241;
   border: 1px solid #46546d;
   color: white;
 }
 
+.navInsta {
+  color: white;
+  display: none;
+}
+
+.refContainer {
+  position: relative;
+}
+
 @media screen and (max-width: 1440px) {
   .catItems .catItem .card {
     height: auto;
-  }
-  .instaBigRez {
-    display: none;
   }
 }
 @media screen and (max-width: 770px) {
@@ -415,6 +417,13 @@ nav {
   #navBarTrans #headerContact {
     display: flex;
     text-align: center;
+  }
+  .navInsta {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 3em;
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 430px) {

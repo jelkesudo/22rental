@@ -12,7 +12,7 @@ window.onload = function(){
             <a class="text-white" href="${i.href}">${i.name}</a>
             </li>`;
         }
-        html += `<li class="nav-item instaBigRez"><a class="nav-link" href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>`;
+        html += `<li class="nav-item instaLowRez"><a class="nav-link" href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>`;
         html += `<li class="nav-item my-1 d-flex justify-content-center">
         <i id="searchSee" class="nav-link fa-solid fa-magnifying-glass"></i>
         <div id="dropdown">
@@ -74,7 +74,7 @@ window.onload = function(){
             $("#dropdownContent").hide();
         });
     });
-    if (window.location.pathname == "/22rental/" || window.location.pathname == "/22rental/index.html"){
+    if (window.location.pathname == "/" || window.location.pathname == "/index.html"){
         //progressBar
         const progressBar = document.getElementById("progressbar");
         const navigation = document.getElementById("navBarTrans");
@@ -98,7 +98,7 @@ window.onload = function(){
             navigation.style.backgroundColor = navigationPre + prec + navigationPost;
         };
     }
-    if (window.location.pathname == "/22rental/categories.html"){
+    if (window.location.pathname == "/categories.html"){
         ajaxCallBack("assets/data/categories.json", "get", "", function(result){
             console.log(result);
             let html = "";
@@ -123,7 +123,7 @@ window.onload = function(){
         });
         
     }
-    if (window.location.pathname == "/22rental/items.html"){
+    if (window.location.pathname == "/items.html"){
         ajaxCallBack("assets/data/categories.json", "get", "", function(result){
             let urlParams = new URLSearchParams(window.location.search);
             let myParam = urlParams.get('category');
@@ -134,7 +134,7 @@ window.onload = function(){
             printItemData();
         });
     }
-    if (window.location.pathname == "/22rental/subcategories.html"){
+    if (window.location.pathname == "/subcategories.html"){
         ajaxCallBack("assets/data/categories.json", "get", "", function(result){
             let urlParams = new URLSearchParams(window.location.search);
             let myParam = urlParams.get('category');
@@ -162,7 +162,7 @@ window.onload = function(){
             $('#printSubCats').html(html);
         });
     }
-    if (window.location.pathname == "/22rental/search.html"){
+    if (window.location.pathname == "/search.html"){
         let urlParams = new URLSearchParams(window.location.search);
         let myParam = urlParams.get('searchParam');
         $('#searchTitle').html(`<h1>Oprema pretrazena sa "${myParam}"</h1>`);
