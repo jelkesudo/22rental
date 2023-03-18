@@ -12,7 +12,6 @@ window.onload = function(){
             <a class="text-white" href="${i.href}">${i.name}</a>
             </li>`;
         }
-        html += `<li class="nav-item instaLowRez"><a class="nav-link" href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>`;
         html += `<li class="nav-item my-1 d-flex justify-content-center">
         <i id="searchSee" class="nav-link fa-solid fa-magnifying-glass"></i>
         <div id="dropdown">
@@ -49,8 +48,7 @@ window.onload = function(){
                                 <img src="assets/data/products/camera.png" alt="camera" />
                             </div>
                             <div class="dropText">
-                                <div class="dropTextCenter"><p>${result[i].name}</p></div>
-                                
+                                <p>${result[i].name}</p>
                             </div>
                         </div>
                         </a>`;
@@ -74,7 +72,7 @@ window.onload = function(){
             $("#dropdownContent").hide();
         });
     });
-    if (window.location.pathname == "/22rental/" || window.location.pathname == "/22rental/index.html"){
+    if (window.location.pathname == "/22rental" || window.location.pathname == "/22rental/index.html"){
         //progressBar
         const progressBar = document.getElementById("progressbar");
         const navigation = document.getElementById("navBarTrans");
@@ -106,7 +104,7 @@ window.onload = function(){
                 if(i.parent == null){
                     html += `
                 
-                    <div class="col-6 col-lg-4 catItem">
+                    <div class="col-12 col-sm6 col-lg-4 catItem">
                 <a href="subcategories.html?category=${i.id}">
                 <div class="card">
                   <img src="assets/data/products/camera.png" class="card-img-top" alt="...">
@@ -147,7 +145,7 @@ window.onload = function(){
                 if(i.id == myParam){
                     continue;
                 }
-                html += `<div class="col-6 col-lg-3 catItem pb-3" data-id="${i.id}">
+                html += `<div class="col-12 col-sm6 col-lg-3 catItem pb-3" data-id="${i.id}">
                 <a href="items.html?category=${i.id}">
                 <div class="card">
                   <img src="assets/data/products/camera.png" class="card-img-top" alt="...">
@@ -176,7 +174,7 @@ window.onload = function(){
             let html = "";
             for(let i = 0; i < result.length; i++){
                 html += `
-                <div class="col-6 col-lg-3 catItem mb-3" data-id="${i.id}">
+                <div class="col-12 col-sm6 col-lg-3 catItem" data-id="${i.id}">
                 <a href="items.html?category=${result[i].categoryId}&item=${result[i].id}">
                 <div class="card">
                   <img src="assets/data/products/camera.png" class="card-img-top" alt="...">
@@ -201,7 +199,7 @@ function printItemData(){
             localStorage.setItem('items', JSON.stringify(newArray));
             html = '';
             for(let i of newArray){
-                html += `<div class="col-6 col-lg-3 catItem mb-3" data-id="${i.id}">
+                html += `<div class="col-12 col-sm6 col-lg-3 catItem" data-id="${i.id}">
                 <div class="card">
                   <img src="assets/data/products/camera.png" class="card-img-top" alt="...">
                   <div class="card-body">
@@ -239,7 +237,7 @@ function printItemData(){
         $("#filterShow").fadeToggle();
     });
     $("#filterBtn").click(function(){
-        $("#filterShow").fadeToggle().css("display", "flex");
+        $("#filterShow").fadeToggle().css("display", "flex");;
     });
 }
 
@@ -258,10 +256,9 @@ function itemPrint(data){
       </div>
     </div>`;
     $("#itemShow").html(html);
-        // $('.zoom').magnify({
+        $('.zoom').magnify({
             
-        //   });
-        $('.zoom').zoom({magnify: 1.3});
+          });
     $('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -286,13 +283,13 @@ function itemPrint(data){
     });
 }
 function printImageItem(arrayPic){
-    let html = `<span><img class="imgItem" src="${arrayPic[0]}" alt="image" data-magnify-src="${arrayPic[0]}"></span>`;
+    let html = `<img class="zoom" src="${arrayPic[0]}" alt="image" data-magnify-src="${arrayPic[0]}">`;
     if(arrayPic.length != 1){
         let temp = "";
         html = `<div class="slider slider-for">`;
         for(let a of arrayPic){
             temp += `
-            <div class="zoom"><img class="imgItem" src="${a}" alt="" data-magnify-src="${a}"></div>
+            <div><img class="zoom" src="${a}" alt="" data-magnify-src="${a}"></div>
             `;
         }
         html += temp;
@@ -333,7 +330,7 @@ function printFooter(){
       </div>
     </div>
     <div class="col-12 text-center">
-        <p>Designed by <a href="https://jelkesudo.github.io/portfolio/" target="_blank">Filip Jelic</a> 2023</p>
+        <p>Copyright <a href="https://jelkesudo.github.io/portfolio/" target="_blank">Filip Jelic</a></p>
     </div>
     `;
     $("#footerPrint").html(html);
