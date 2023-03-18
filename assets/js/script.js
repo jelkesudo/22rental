@@ -1,3 +1,4 @@
+console.log("to je to");
 window.onload = function(){
     AOS.init();
     printFooter();
