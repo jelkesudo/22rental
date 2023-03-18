@@ -258,9 +258,9 @@ function itemPrint(data){
       </div>
     </div>`;
     $("#itemShow").html(html);
-        $('.zoom').magnify({
+        // $('.zoom').magnify({
             
-          });
+        //   });
     $('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
