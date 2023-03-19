@@ -6,15 +6,6 @@
   font-family: "slike-sajt";
   src: url("../fonts/Proxima Nova Font.otf");
 }
-@-webkit-keyframes arrow {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-10px, -10px);
-  }
-}
 @keyframes arrow {
   0% {
     opacity: 1;
@@ -202,12 +193,9 @@ nav {
   border-top: none;
   border-right: 1px #fff solid;
   border-bottom: 1px #fff solid;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-name: arrow;
-          animation-name: arrow;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: arrow;
 }
 
 #selectCatPage {
@@ -374,13 +362,23 @@ nav {
   flex-direction: column;
 }
 .navbar #headerContact {
-  display: none;
+  width: 100%;
+  display: flex;
   justify-content: space-between;
 }
-.navbar #headerContact a {
-  padding: 0;
-  color: white;
-  font-size: 12px;
+.navbar #headerContact .contactSection {
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+}
+.navbar #headerContact .contactSection:first-child {
+  margin: 0px;
+}
+.navbar #headerContact .contactSection .sectionItem {
+  margin: 0px 10px;
+}
+.navbar #headerContact .contactSection .sectionItem a {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .flex-end {
@@ -393,15 +391,6 @@ nav {
   color: white;
 }
 
-.navInsta {
-  color: white;
-  display: none;
-}
-
-.refContainer {
-  position: relative;
-}
-
 @media screen and (max-width: 1440px) {
   .catItems .catItem .card {
     height: auto;
@@ -411,22 +400,18 @@ nav {
   #dropdownContent {
     left: -25%;
   }
+  .contactSection {
+    width: 50%;
+    font-size: 12px;
+  }
   #itemShow .toCenter .prodImg {
     width: 100%;
   }
-  #navBarTrans #headerContact {
-    display: flex;
-    text-align: center;
-  }
-  .navInsta {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 3em;
-    font-size: 20px;
-  }
 }
 @media screen and (max-width: 430px) {
+  #navBarTrans #headerContact {
+    display: none;
+  }
   .slider-nav {
     display: none;
   }

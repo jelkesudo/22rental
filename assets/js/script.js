@@ -1,4 +1,3 @@
-console.log("to je to");
 window.onload = function(){
     AOS.init();
     printFooter();
@@ -49,7 +48,8 @@ window.onload = function(){
                                 <img src="assets/data/products/camera.png" alt="camera" />
                             </div>
                             <div class="dropText">
-                                <p>${result[i].name}</p>
+                                <div class="dropTextCenter"><p>${result[i].name}</p></div>
+                                
                             </div>
                         </div>
                         </a>`;
@@ -105,7 +105,7 @@ window.onload = function(){
                 if(i.parent == null){
                     html += `
                 
-                    <div class="col-12 col-sm6 col-lg-4 catItem">
+                    <div class="col-12 col-sm-6 col-lg-4 catItem">
                 <a href="subcategories.html?category=${i.id}">
                 <div class="card">
                   <img src="assets/data/products/camera.png" class="card-img-top" alt="...">
@@ -146,7 +146,7 @@ window.onload = function(){
                 if(i.id == myParam){
                     continue;
                 }
-                html += `<div class="col-12 col-sm6 col-lg-3 catItem pb-3" data-id="${i.id}">
+                html += `<div class="col-12 col-sm-6 col-lg-3 catItem pb-3" data-id="${i.id}">
                 <a href="items.html?category=${i.id}">
                 <div class="card">
                   <img src="assets/data/products/camera.png" class="card-img-top" alt="...">
@@ -175,7 +175,7 @@ window.onload = function(){
             let html = "";
             for(let i = 0; i < result.length; i++){
                 html += `
-                <div class="col-12 col-sm6 col-lg-3 catItem" data-id="${i.id}">
+                <div class="col-12 col-sm-6 col-lg-3 catItem mb-3" data-id="${i.id}">
                 <a href="items.html?category=${result[i].categoryId}&item=${result[i].id}">
                 <div class="card">
                   <img src="assets/data/products/camera.png" class="card-img-top" alt="...">
@@ -200,12 +200,11 @@ function printItemData(){
             localStorage.setItem('items', JSON.stringify(newArray));
             html = '';
             for(let i of newArray){
-                html += `<div class="col-12 col-sm6 col-lg-3 catItem" data-id="${i.id}">
+                html += `<div class="col-12 col-sm-6 col-lg-3 catItem mb-3" data-id="${i.id}">
                 <div class="card">
                   <img src="assets/data/products/camera.png" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title text-center">${i.name}</h5>
-                    <p>${i.price}</p>
                   </div>
                 </div>
               </div>`;
@@ -239,7 +238,7 @@ function printItemData(){
         $("#filterShow").fadeToggle();
     });
     $("#filterBtn").click(function(){
-        $("#filterShow").fadeToggle().css("display", "flex");;
+        $("#filterShow").fadeToggle().css("display", "flex");
     });
 }
 
@@ -253,7 +252,7 @@ function itemPrint(data){
       </div>
       <div class="col-12 col-lg-6 p-5">
         <h2>${data.name}</h2>
-        <h5>nesto dodatno</h5>
+        <h5>${data.price} €</h5>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, tenetur aspernatur? Nisi officiis autem tempora doloremque, minus odit assumenda consequatur quidem laborum, error, minima veritatis provident ex et reprehenderit. Minima.</p>
       </div>
     </div>`;
@@ -261,6 +260,7 @@ function itemPrint(data){
         // $('.zoom').magnify({
             
         //   });
+        $('.zoom').zoom({magnify: 1.3});
     $('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -285,13 +285,13 @@ function itemPrint(data){
     });
 }
 function printImageItem(arrayPic){
-    let html = `<img class="zoom" src="${arrayPic[0]}" alt="image" data-magnify-src="${arrayPic[0]}">`;
+    let html = `<span><img class="imgItem" src="${arrayPic[0]}" alt="image" data-magnify-src="${arrayPic[0]}"></span>`;
     if(arrayPic.length != 1){
         let temp = "";
         html = `<div class="slider slider-for">`;
         for(let a of arrayPic){
             temp += `
-            <div><img class="zoom" src="${a}" alt="" data-magnify-src="${a}"></div>
+            <div class="zoom"><img class="imgItem" src="${a}" alt="" data-magnify-src="${a}"></div>
             `;
         }
         html += temp;
@@ -332,7 +332,7 @@ function printFooter(){
       </div>
     </div>
     <div class="col-12 text-center">
-        <p>Copyright <a href="https://jelkesudo.github.io/portfolio/" target="_blank">Filip Jelic</a></p>
+        <p>Designed by <a href="https://jelkesudo.github.io/portfolio/" target="_blank">Filip Jelic</a> 2023</p>
     </div>
     `;
     $("#footerPrint").html(html);

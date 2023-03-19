@@ -1,14 +1,14 @@
 [
-    { "id": 9, "name": "Zoom F8n", "categoryId": 9, "price": 50.0 },
+    { "id": 9, "name": "Zoom F8n", "categoryId": 9, "price": 40.0 },
     { "id": 10, "name": "Zoom h6", "categoryId": 9, "price": 20.0 },
     { "id": 11, "name": "RODE NTG3 +Blimp + Pecaljka", "categoryId": 11, "price": 20.0 },
-    { "id": 14, "name": "Zoom H1", "categoryId": 9, "price": 10.0},
+    { "id": 14, "name": "Zoom H1", "categoryId": 9, "price": 10.0 },
     { "id": 15, "name": "RODE Micro", "categoryId": 11, "price": 10.0 },
-    { "id": 17, "name": "Sony A74", "categoryId": 3, "price": 50.0 , "image" : [
-        "assets/data/products/camera1.png",
-        "assets/data/products/camera2.png",
-        "assets/data/products/camera3.png"
-    ]},
+    { "id": 17, "name": "Sony A74", "categoryId": 3, "price": 50.0, "image": [
+            "assets/data/products/camera.png",
+            "assets/data/products/camera2.png",
+            "assets/data/products/camera3.png"
+        ] },
     { "id": 23, "name": "Sigma 24-70 2.8 ff", "categoryId": 14, "price": 20.0 },
     { "id": 24, "name": "Canon FD 50mm f1.4 ff", "categoryId": 14, "price": 10.0 },
     { "id": 25, "name": "Sigma 16mm 1.4 crop (19mm na ff)", "categoryId": 14, "price": 20.0 },
@@ -23,7 +23,7 @@
     { "id": 42, "name": "DOLLY", "categoryId": 7, "price": 30.0 },
     { "id": 46, "name": "Shoulder rig lanparte sa mehanickim sarfom", "categoryId": 7, "price": 30.0 },
     { "id": 47, "name": "Zhiyun crane 2 gimbal", "categoryId": 7, "price": 30.0 },
-    { "id": 48, "name": "Variable ND fitler 2-400 67mm", "categoryId": 8, "price": 5.0 },
+    { "id": 48, "name": "Variable ND fitler 2-400 67mm ", "categoryId": 8, "price": 5.0 },
     { "id": 49, "name": "Polarizing filter 67mm ", "categoryId": 8, "price": 5.0 },
     { "id": 50, "name": "Godox TL 60 tube Rgb light", "categoryId": 5, "price": 30.0 },
     { "id": 51, "name": "Dracast 30W", "categoryId": 5, "price": 15.0 },
