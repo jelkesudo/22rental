@@ -285,13 +285,14 @@ function itemPrint(data){
     });
 }
 function printImageItem(arrayPic){
-    let html = `<span><img class="imgItem" src="${arrayPic[0]}" alt="image" data-magnify-src="${arrayPic[0]}"></span>`;
+    arrayPic = arrayPic.split(" ,");
+    let html = `<span class="zoom"><img class="imgItem" src="assets/data/products/${arrayPic[0]}" alt="image" data-magnify-src="${arrayPic[0]}"></span>`;
     if(arrayPic.length != 1){
         let temp = "";
         html = `<div class="slider slider-for">`;
         for(let a of arrayPic){
             temp += `
-            <div class="zoom"><img class="imgItem" src="${a}" alt="" data-magnify-src="${a}"></div>
+            <div class="zoom"><img class="imgItem" src="assets/data/products/${a}" alt="" data-magnify-src="${a}"></div>
             `;
         }
         html += temp;
@@ -300,7 +301,7 @@ function printImageItem(arrayPic){
         temp = "";
         for(let a of arrayPic){
             temp += `
-            <div><img src="${a}" alt=""></div>
+            <div><img src="assets/data/products/${a}" alt=""></div>
             `;
         }
         html += temp;
