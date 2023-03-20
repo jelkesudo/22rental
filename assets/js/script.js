@@ -285,8 +285,11 @@ function itemPrint(data){
     });
 }
 function printImageItem(arrayPic){
-    arrayPic = arrayPic.split(" ,");
     let html = `<span class="zoom"><img class="imgItem" src="assets/data/products/${arrayPic[0]}" alt="image" data-magnify-src="${arrayPic[0]}"></span>`;
+    if(arrayPic == null){
+        html += `<span class="zoom"><p>Nema slike za dati predmet.</p></span>`;
+    }
+    arrayPic = arrayPic.split(" ,");
     if(arrayPic.length != 1){
         let temp = "";
         html = `<div class="slider slider-for">`;
