@@ -380,33 +380,29 @@ nav{
   display: flex;
   flex-direction: column;
   #headerContact{
-    width: 100%;
-    display: flex;
+    display: none;
     justify-content: space-between;
-    .contactSection{
-      width: 30%;
-      display: flex;
-      justify-content: flex-start;
-      &:first-child{
-        margin: 0px;
-      }
-      .sectionItem{
-        margin: 0px 10px;
-        a{
-          color: rgba(255, 255, 255, 0.5);
-        }
-      }
+    a{
+      padding: 0;
+      color: white;
+      font-size: 12px;
     }
   }
 }
 .flex-end{
   justify-content: flex-end !important;
 }
-
 #searchDo{
   background-color: #293241;
   border: 1px solid #46546d;
   color: white;
+}
+.navInsta{
+  color: white;
+  display: none;
+}
+.refContainer{
+  position: relative;
 }
 @media screen and (max-width: 1440px) {
   .catItems{
@@ -421,20 +417,25 @@ nav{
   #dropdownContent{
     left: -25%;
   }
-  .contactSection{
-    width: 50%;
-    font-size: 12px;
-  }
   #itemShow .toCenter .prodImg {
     width: 100%;
   }
-}
-@media screen and (max-width: 430px) {
   #navBarTrans{
     #headerContact{
-      display: none;
+      display: flex;
+      text-align: center;
     }
   }
+  .navInsta{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 3em;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 430px) {
+  
   .slider-nav{
     display: none;
   }
