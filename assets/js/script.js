@@ -133,7 +133,7 @@ window.onload = function(){
             printItemData();
         });
     }
-    if (window.location.pathname == "/subcategories.html"){
+    if (window.location.pathname == "/22rental/subcategories.html"){
         ajaxCallBack("assets/data/categories.json", "get", "", function(result){
             let urlParams = new URLSearchParams(window.location.search);
             let myParam = urlParams.get('category');
