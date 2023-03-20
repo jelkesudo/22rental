@@ -252,7 +252,7 @@ function itemPrint(data){
       </div>
       <div class="col-12 col-lg-6 p-5">
         <h2>${data.name}</h2>
-        <h5>${data.price} €</h5>
+        <h5>${data.price} € / dan</h5>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, tenetur aspernatur? Nisi officiis autem tempora doloremque, minus odit assumenda consequatur quidem laborum, error, minima veritatis provident ex et reprehenderit. Minima.</p>
       </div>
     </div>`;
