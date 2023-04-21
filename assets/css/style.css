@@ -6,15 +6,6 @@
   font-family: "slike-sajt";
   src: url("../fonts/Proxima Nova Font.otf");
 }
-@-webkit-keyframes arrow {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-10px, -10px);
-  }
-}
 @keyframes arrow {
   0% {
     opacity: 1;
@@ -58,26 +49,36 @@ p {
   padding: 0px !important;
 }
 
+.homeButton {
+  background-color: white;
+  padding: 10px 20px;
+  margin: 10px 0px;
+  border: none;
+  color: black;
+}
+
 #bannerCarousel {
   z-index: 7;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 50%;
+  width: 25%;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 50px 0px;
 }
 
 .carousel-item1 {
-  background-image: url("../img/one.png") !important;
+  background-image: url("../img/one.jpg") !important;
 }
 
 .carousel-item2 {
-  background-image: url("../img/two.png") !important;
+  background-image: url("../img/two.jpg") !important;
 }
 
 .carousel-item3 {
-  background-image: url("../img/three.png") !important;
+  background-image: url("../img/three.jpg") !important;
 }
 
 nav {
@@ -92,14 +93,6 @@ nav {
 
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
   color: #fff;
-}
-
-.bg-half-tron {
-  width: 100%;
-  background-image: url("../img/banner.jpg");
-  background-size: cover;
-  background-position: center;
-  margin: 0px auto;
 }
 
 .catItems {
@@ -202,12 +195,9 @@ nav {
   border-top: none;
   border-right: 1px #fff solid;
   border-bottom: 1px #fff solid;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-name: arrow;
-          animation-name: arrow;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: arrow;
 }
 
 #selectCatPage {
@@ -407,6 +397,17 @@ nav {
     height: auto;
   }
 }
+@media screen and (max-width: 1024px) {
+  #bannerCarousel h1 {
+    font-size: 16px;
+  }
+  #bannerCarousel p {
+    font-size: 14px;
+  }
+  #bannerCarousel button {
+    font-size: 12px;
+  }
+}
 @media screen and (max-width: 770px) {
   #dropdownContent {
     left: -25%;
@@ -430,4 +431,18 @@ nav {
   .slider-nav {
     display: none;
   }
+  #bannerCarousel {
+    width: 75%;
+  }
+}
+.bg-darker {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bg-newer {
+  background-color: #252525;
+}
+
+.triWayWidth {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

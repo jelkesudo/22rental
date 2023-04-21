@@ -42,10 +42,15 @@ window.onload = function(){
                         lengthResult = 3;
                     }
                     for(let i = 0; i < lengthResult; i++){
+                        let slika = 'camera.png';
+                        if(result[i].image != null){
+                            arrayPic = result[i].image.split(" ,");
+                            slika = arrayPic[0];
+                        }
                         html += `<a href="items.html?category=${result[i].categoryId}&item=${result[i].id}">
                         <div class="dropItem">
                             <div class="dropImage">
-                                <img src="assets/data/products/camera.png" alt="camera" />
+                                <img src="assets/data/products/${slika}" alt="camera" />
                             </div>
                             <div class="dropText">
                                 <div class="dropTextCenter"><p>${result[i].name}</p></div>
@@ -96,6 +101,27 @@ window.onload = function(){
 
             navigation.style.backgroundColor = navigationPre + prec + navigationPost;
         };
+        ajaxCallBack("assets/data/equipment.json", "get", "", function(result){
+            let html = "";
+            for(let i = result.length - 1; i > result.length - 4; i--){
+                let slika = 'camera.png';
+                if(result[i].image != null){
+                    arrayPic = result[i].image.split(" ,");
+                    slika = arrayPic[0];
+                }
+                html += `<div class="col-12 col-sm-6 col-lg-3 catItem mb-3" data-id="${i.id}">
+                <a href="items.html?category=${result[i].categoryId}&item=${result[i].id}&cat">
+                <div class="card">
+                  <img src="assets/data/products/${slika}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">${result[i].name}</h5>
+                  </div>
+                </div>
+                </a>
+              </div>`;
+            }
+            $("#printNew").html(html);
+        });
     }
     if (window.location.pathname == "/22rental/categories.html"){
         ajaxCallBack("assets/data/categories.json", "get", "", function(result){
@@ -174,11 +200,16 @@ window.onload = function(){
             });
             let html = "";
             for(let i = 0; i < result.length; i++){
+                let slika = 'camera.png';
+                if(result[i].image != null){
+                    arrayPic = result[i].image.split(" ,");
+                    slika = arrayPic[0];
+                }
                 html += `
                 <div class="col-12 col-sm-6 col-lg-3 catItem mb-3" data-id="${i.id}">
-                <a href="items.html?category=${result[i].categoryId}&item=${result[i].id}">
+                <a href="items.html?category=${result[i].categoryId}&item=${result[i].id}&cat">
                 <div class="card">
-                  <img src="assets/data/products/camera.png" class="card-img-top" alt="...">
+                  <img src="assets/data/products/${slika}" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title text-center">${result[i].name}</h5>
                   </div>
@@ -200,9 +231,14 @@ function printItemData(){
             localStorage.setItem('items', JSON.stringify(newArray));
             html = '';
             for(let i of newArray){
+                let slika = 'camera.png';
+                if(i.image != null){
+                    arrayPic = i.image.split(" ,");
+                    slika = arrayPic[0];
+                }
                 html += `<div class="col-12 col-sm-6 col-lg-3 catItem mb-3" data-id="${i.id}">
                 <div class="card">
-                  <img src="assets/data/products/camera.png" class="card-img-top" alt="...">
+                  <img src="assets/data/products/${slika}" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title text-center">${i.name}</h5>
                   </div>
@@ -287,7 +323,7 @@ function itemPrint(data){
 function printImageItem(arrayPic){
     let html = "";
     if(arrayPic == null){
-        html = `<span class="zoom"><p>Nema slike za dati predmet.</p></span>`;
+        html = `<span class="zoom"><img class="imgItem" src="assets/data/products/camera.png" alt="image" data-magnify-src="camera.png"></span>`;
         return html;
     }
     arrayPic = arrayPic.split(" ,");

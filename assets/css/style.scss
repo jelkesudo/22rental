@@ -54,6 +54,13 @@ p{
   margin: 0px !important;
   padding: 0px !important;
 }
+.homeButton{
+  background-color: white;
+  padding: 10px 20px;
+  margin: 10px 0px;
+  border: none;
+  color: black;
+}
 #bannerCarousel{
     z-index: 7;
     position: absolute;
@@ -61,19 +68,20 @@ p{
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    width: 50%;
+    width: 25%;
     text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    padding: 50px 0px;
 }
 .carousel-item1{
-    background-image: url("../img/one.png") !important;
+    background-image: url("../img/one.jpg") !important;
 }
 .carousel-item2{
-  background-image: url("../img/two.png") !important;
+  background-image: url("../img/two.jpg") !important;
 }
 .carousel-item3{
-  background-image: url("../img/three.png") !important;
+  background-image: url("../img/three.jpg") !important;
 }
-
 // nav
 nav{
   z-index: 9 !important;
@@ -91,13 +99,7 @@ nav{
     color: #fff;
   }
 
-.bg-half-tron{
-  width: 100%;
-  background-image: url("../img/banner.jpg");
-  background-size: cover;
-  background-position: center;
-  margin: 0px auto;
-}
+
 //card
 .catItems{
   pointer-events: none;
@@ -413,6 +415,19 @@ nav{
     }
   }
 }
+@media screen and (max-width: 1024px) {
+  #bannerCarousel{
+    h1{
+      font-size: 16px;
+    }
+    p{
+      font-size: 14px;
+    }
+    button{
+      font-size: 12px;
+    }
+  }
+}
 @media screen and (max-width: 770px){
   #dropdownContent{
     left: -25%;
@@ -439,4 +454,16 @@ nav{
   .slider-nav{
     display: none;
   }
+  #bannerCarousel{
+    width: 75%;
+  }
+}
+.bg-darker{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.bg-newer{
+  background-color: #252525;
+}
+.triWayWidth{
+  width: 100%;
 }

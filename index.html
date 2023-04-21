@@ -37,8 +37,10 @@
   </nav>
   <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-touch="false" data-ride="carousel">
     <div id="bannerCarousel" class="text-white">
-      <h1 class="text-white">Rent opreme</h1>
-      <p>Pogledajte sta nudimo</p>
+      <h1 class="text-white">Rental 22</h1>
+      <p>Iznajmljivanje video i audio opreme</p>
+      <a href="categories.html"><button class="homeButton">Pogledajte naš katalog</button></a> 
+
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active carousel-item1" data-interval="5000"></div>
@@ -91,6 +93,39 @@
       </div>
     </div>
   </div>
+  <div class="triWayWidth bg-newer">
+    <div class="container py-5 my-3">
+      <div class="row p-3">
+        <div class="col-12 text-center pb-4">
+          <h2>Najnovije iz naše ponude</h2>
+        </div>
+      </div>
+      <div id="printNew" class="row text-center catItems d-flex justify-content-center" data-aos="zoom-in">
+        
+        <div class="col-12 col-sm-6 col-lg-3 catItem mb-3" data-id="${i.id}">
+          <a href="items.html?category=${result[i].categoryId}&item=${result[i].id}&cat">
+          <div class="card">
+            <img src="assets/data/products/camera.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center">${result[i].name}</h5>
+            </div>
+          </div>
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 catItem mb-3" data-id="${i.id}">
+          <a href="items.html?category=${result[i].categoryId}&item=${result[i].id}&cat">
+          <div class="card">
+            <img src="assets/data/products/camera.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center">${result[i].name}</h5>
+            </div>
+          </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <!-- <div class="w-100">
     <div class="row bg-half-tron">
       <div class="half-tron m-0 col-12 col-sm-6 py-5 d-flex justify-content-end">
