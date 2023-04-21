@@ -1,4 +1,5 @@
 window.onload = function(){
+    console.log(window.location.pathname);
     AOS.init();
     printFooter();
     ajaxCallBack("assets/data/nav.json", "get", "", function(result){
