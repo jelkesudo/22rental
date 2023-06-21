@@ -2,7 +2,7 @@ $(document).ready(function() {
     AOS.init();
     ajaxCallBack("nav", function(result){
       printHeader(result);
-      if(window.location.pathname == "/" || window.location.pathname == "/index.html"){
+      if(window.location.pathname == "/22rental" || window.location.pathname == "/22rental/index.html"){
         nextParticle = new NextParticle(document.all.particle22);
         nextParticle.width = window.innerWidth - 200;
         nextParticle.height = window.innerHeight - 300;
@@ -23,7 +23,7 @@ $(document).ready(function() {
             navigation.style.backgroundColor = navigationPre + prec + navigationPost;
         };
       }
-      if(window.location.pathname == "/oprema.html"){
+      if(window.location.pathname == "/22rental/oprema.html"){
         ajaxCallBack("categories", function(result){
           localStorage.setItem("categories", JSON.stringify(result));
           printMainCategories(result);
@@ -112,7 +112,7 @@ function printSubCategories(data){
 }
 function printHeader(data){
   let dodatna = " fj-bg-black";
-  if(window.location.pathname == "/" || window.location.pathname == "/index.html"){
+  if(window.location.pathname == "/22rental" || window.location.pathname == "/22rental/index.html"){
     dodatna = "";
   }
   let html = `
