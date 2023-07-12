@@ -1,6 +1,5 @@
 $(document).ready(function() {
     AOS.init();
-    console.log(window.location.pathname);
     ajaxCallBack("nav", function(result){
       printHeader(result);
       if(window.location.pathname == "/22rental" || window.location.pathname == "/22rental/index.html"){
@@ -48,30 +47,30 @@ function printMainCategories(data){
   $("#printCatCards").html(html);
   $(".card").click(function() {
     if($("#categoryContainer").width() == window.innerWidth){
-      $("#categoryContainer").css("width", "30%");
-      $("#innerSubCatContainer").addClass("cursor-poiner");
+      $("#categoryContainer").css("width", "0%");
       let getOne = JSON.parse(localStorage.getItem("categories"));
-      let getOnePrint = getOne.filter(x => x.id == $(this).data("id"));
-      $("#printCatCards").html(`
-      <div data-id="${getOnePrint[0].id}" data-title="${getOnePrint[0].name}" class="card">
-        <div class="cardImage">
-          <img src="assets/data/products/CanonFD50mmf1.4.jpg" alt="${getOnePrint[0].name}">
-        </div>
-        <div class="cardText">
-          <h4>${getOnePrint[0].name}</h4>
-        </div>
-      </div>`);
+      // let getOnePrint = getOne.filter(x => x.id == $(this).data("id"));
+      // $("#printCatCards").html(`
+      // <div data-id="${getOnePrint[0].id}" data-title="${getOnePrint[0].name}" class="card">
+      //   <div class="cardImage">
+      //     <img src="assets/data/products/CanonFD50mmf1.4.jpg" alt="${getOnePrint[0].name}">
+      //   </div>
+      //   <div class="cardText">
+      //     <h4>${getOnePrint[0].name}</h4>
+      //   </div>
+      // </div>`);
+      $("#printCatCards").html("");
       let getOneSub = getOne.filter(x => x.parent == $(this).data("id"));
       localStorage.setItem("idSubCat", $(this).data("id"));
       printSubCategories(getOneSub);
     }
   });
-  $("#categoryContainer").on("click", function(){
+  $("#arrowSubBack").on("click", function(){
     if($("#categoryContainer").width() < window.innerWidth){
       $("#categoryContainer").css("width", "100%");
-      $("#innerSubCatContainer").css("height", "100vh");
-      $("#innerSubCatContainer").removeClass("cursor-poiner");
-      $("#innerSubCatContainer").addClass("jc-ai");
+      $("#innerSubCatContainer").css("width", "100%");
+      //$("#innerSubCatContainer").addClass("jc-ai");
+      $("#printSubCats").html("");
       let toFix = JSON.parse(localStorage.getItem("categories"));
       printMainCategories(toFix);
     }
@@ -91,19 +90,31 @@ function printSubCategories(data){
   }
   $("#printSubCats").html(html);
   $(".card").click(function() {
-    if($("#innerSubCatContainer").height() == window.innerHeight){
-      $("#innerSubCatContainer").removeClass("jc-ai");
-      $("#innerSubCatContainer").addClass("cursor-poiner");
-      $("#innerSubCatContainer").css("height", "10vh");
-      html = `<div><h3>${$(this).data("title")}</h3></div>`;
-      $("#printSubCats").html(html);
+    if(!$("#innerSubCatContainer").hasClass("jc-ai")){
+      $("#innerSubCatContainer").addClass("jc-ai");
+      $("#subCatContainer").css("width", "0%");
+      $("#arrowSubBack").css("display", "none");
+      $("#printSubCats").html("");
+      const idToPrint = $(this).data("id");
+      if (JSON.parse(localStorage.getItem("itemsRental")) !== null) {
+        toPrintArray = JSON.parse(localStorage.getItem("itemsRental"));
+        printItemsCards(toPrintArray, idToPrint);
+      } else {
+        ajaxCallBack("equipment", function(result){
+          
+          localStorage.setItem("itemsRental", JSON.stringify(result));
+          printItemsCards(result, idToPrint);
+        })
+      }
     }
   });
-  $("#innerSubCatContainer").on("click", function(){
-    if($("#innerSubCatContainer").height() < window.innerHeight){
-      $("#innerSubCatContainer").addClass("jc-ai");
-      $("#innerSubCatContainer").removeClass("cursor-poiner");
-      $("#innerSubCatContainer").css("height", "100vh");
+  $("#arrowItemBack").on("click", function(){
+    if($("#innerSubCatContainer").hasClass("jc-ai")){
+      console.log("uslo");
+      $("#innerSubCatContainer").removeClass("jc-ai");
+      $("#arrowSubBack").css("display", "block");
+      $("#subCatContainer").css("width", "100%");
+      $("#printItemCards").html("");
       let toFix = JSON.parse(localStorage.getItem("categories"));
       let thatCat = localStorage.getItem("idSubCat");
       let toFixOne = toFix.filter(x => x.parent == thatCat);
@@ -111,11 +122,35 @@ function printSubCategories(data){
     }
   });
 }
-function printHeader(data){
-  let dodatna = " fj-bg-black";
-  if(window.location.pathname == "/22rental" || window.location.pathname == "/22rental/index.html"){
-    dodatna = "";
+function printItemsCards(data, categoryId){
+  let filteredData = data.filter(x => x.categoryId == categoryId);
+  let html = `<div class="fj-text-center"><h3>Trenutno nema dostupne opreme u ovoj kategoriji.</h3></div>`;
+  if(filteredData.length != 0){
+    html = "";
+    for(let d of filteredData){
+      let slika = 'camera.png';
+      if(d.image != null){
+          arrayPic = d.image.split(" ,");
+          slika = arrayPic[0];
+      }
+      html += `<div data-id="${d.id}" data-title="${d.name}" class="card">
+          <div class="cardImage">
+            <img src="assets/data/products/${slika}" alt="${d.name}">
+          </div>
+          <div class="cardText">
+            <h4>${d.name}</h4>
+          </div>
+        </div>`;
+    }
   }
+  $("#printItemCards").html(html);
+}
+function printHeader(data){
+  // let dodatna = " fj-bg-black";
+  // if(window.location.pathname == "/" || window.location.pathname == "/index.html"){
+  //   dodatna = "";
+  // }
+  dodatna = "";
   let html = `
   <header id="headerFirst" class="navBarTrans${dodatna}">
             <div class="innerDiv">
