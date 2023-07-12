@@ -1,6 +1,5 @@
 $(document).ready(function() {
     AOS.init();
-    console.log(window.location.pathname);
     ajaxCallBack("nav", function(result){
       printHeader(result);
       if(window.location.pathname == "/22rental/" || window.location.pathname == "/22rental/index.html"){
