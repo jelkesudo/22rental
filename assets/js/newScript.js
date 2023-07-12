@@ -1,8 +1,9 @@
 $(document).ready(function() {
     AOS.init();
+    console.log(window.location.pathname);
     ajaxCallBack("nav", function(result){
       printHeader(result);
-      if(window.location.pathname == "/22rental" || window.location.pathname == "/22rental/index.html"){
+      if(window.location.pathname == "/22rental/" || window.location.pathname == "/22rental/index.html"){
         nextParticle = new NextParticle(document.all.particle22);
         nextParticle.width = window.innerWidth - 200;
         nextParticle.height = window.innerHeight - 300;
