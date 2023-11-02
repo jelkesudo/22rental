@@ -1,4 +1,3 @@
-
 $tamnoPlava: rgb(65, 90, 119);
 $big-stone:rgb(21, 37, 54);
 $bg-dark: #121212;
@@ -11,10 +10,17 @@ $thatBlue: #1b76df;
 .bg-darkBlue{
   background-color: $big-stone;
 }
-
+.fj-thatBlue{
+  color: $thatBlue;
+}
 @font-face {
-    font-family: "slike-sajt";
-    src: url("../fonts/Kanit-MediumItalic.ttf");
+  font-family: "slike-sajt";
+  src: url("../fonts/Kanit-Medium.ttf");
+}
+@font-face {
+  font-family: "naslov-sajt";
+  src: url("../fonts/Kanit-MediumItalic.ttf");
+
 }
 @keyframes arrow{
     0%{
@@ -30,7 +36,7 @@ $thatBlue: #1b76df;
     padding: 0px;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    //outline: 1px solid green;
+    outline: 1px solid green;
 }
 ul{
     list-style-type: none;
@@ -47,6 +53,7 @@ body{
 a{
     transition: 0.5s;
     &:hover{
+        color: $thatBlue !important;
         text-decoration: none !important;
     }
 }
@@ -54,52 +61,119 @@ p{
   margin: 0px !important;
   padding: 0px !important;
 }
-.homeButton{
-  background-color: white;
-  padding: 10px 20px;
-  margin: 10px 0px;
-  border: none;
-  color: black;
+main{
+    #storeDD{
+      position: relative;
+      width: 100%;
+      // 22 logo
+      #ddLogoFix{
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        #ddLogo{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            .text{
+              z-index: 5;
+              position: absolute;
+              width: 40%;
+              text-align: center;
+              margin: 0px auto;
+              justify-content: center;
+              align-items: center;
+              h1{
+                color: white;
+                font-size: 100px;
+                font-family: "naslov-sajt" !important;
+              }
+            }
+            .particleImage{
+              z-index: 6;
+              img{
+                width: 100%;
+              }
+            }
+        }
+      }
+    }
+    #ponudeRental{
+      width: 60%;
+      margin: 0px auto;
+      background-color: orange;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .velikePonude, .malePonude{
+        width: 48%;
+      }
+      .malePonude{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        .malaPonuda{
+          width: 100%;
+          background-color: grey;
+        }
+      }
+    }
+    #opisRental{
+      width: 100%;
+      background-color: #252525;
+      .opisRentalShell{
+        width: 80%;
+        margin: 0px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        .slikaOpis, .tekstOpis{
+          width: 48%;
+          padding: 20px;
+        }
+        .slikaOpis{
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
+    #popustInfo{
+      width: 80%;
+      margin: 0px auto;
+      .popustHeader{
+        padding-top: 30px;
+        width: 100%;
+        h2{
+          font-size: 3em;
+        }
+      }
+      .popustTextSlika{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .popustText{
+          width: 70%;
+        }
+        .popustSlika{
+          width: 28%;
+          text-align: center;
+          img{
+            width: 50%; 
+          }
+        }
+      }
+    }
 }
-#bannerCarousel{
-    z-index: 7;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    width: 25%;
-    text-align: center;
-    background-color: rgba(0,0,0,0.5);
-    padding: 50px 0px;
-}
-.carousel-item1{
-    background-image: url("../img/one.jpg") !important;
-}
-.carousel-item2{
-  background-image: url("../img/two.jpg") !important;
-}
-.carousel-item3{
-  background-image: url("../img/three.jpg") !important;
-}
-// nav
-nav{
-  z-index: 9 !important;
-}
-.carousel-item {
-    height: 100vh;
-    background: no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  
-  .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-    color: #fff;
-  }
 
-
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color: #fff;
+}
 //card
 .catItems{
   pointer-events: none;
@@ -107,10 +181,8 @@ nav{
     pointer-events: auto;
     transition: all 150ms ease-in-out;
     .card{
-      //background-color: rgba(79, 79, 79, 0.5) !important;
-      background-color: transparent;
+      background-color: rgba(79, 79, 79, 0.5) !important;
       color: white;
-      height: 22em;
       img{
         padding: 15px;
         transition: all 150ms ease-in-out;
@@ -118,6 +190,23 @@ nav{
     }
   }
 }
+
+.soloCard{
+  background-color: rgba(79, 79, 79, 0.5) !important;
+  color: white;
+  text-align: center;
+  img{
+    width: 50%;
+    padding: 15px;
+    transition: all 150ms ease-in-out;
+  }
+}
+.soloCard:hover {
+    img{
+      padding: 10px;
+    }
+}
+
 
 .catItems:hover > .catItem:hover {
   z-index: 7;
@@ -132,82 +221,21 @@ nav{
 }
 //end of card
 
-// circle info
-.info-img{
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin: 0px auto;
-  background-color: rgb(51, 51, 51);
-  padding: 25px 0px;
-  text-align: center;
-  transition: 0.5s;
-  p{
-    margin-top: 200px;
-    font-size: 2.5em;
-    font-weight: bold;
-  }
-  &:hover{
-    background-color: $thatBlue;
-    p{
-      i{
-        color: $bg-dark;
+footer{
+  width: 100%;
+  .fj-footer{
+    width: 60%;
+    margin: 0px auto;
+    .fj-footer-div{
+      border-left: 1px solid white;
+      ul{
+        margin-left: 20px;
+        li{
+          padding: 10px 0px;
+        }
       }
     }
   }
-}
-.info-heading{
-  padding-top: 10px;
-}
-.info-desc{
-  padding: 5px 20px;
-}
-.fj-footer{
-  width: 60%;
-  margin: 0px auto;
-  .fj-footer-div{
-    border-left: 1px solid white;
-    ul{
-      margin-left: 20px;
-      li{
-        padding: 10px 0px;
-      }
-    }
-  }
-}
-
-// arrow
-.arrow, .arrow:before{
-    position: absolute;
-    left: 50%;
-    z-index: 7;
-}
-.arrow{
-    width: 40px;
-    height: 40px;
-    top: 95vh;
-    margin: -20px 0 0 -20px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    border-left: none;
-    border-top: none;
-    border-right: 2px #fff solid;
-    border-bottom: 2px #fff solid;
-}
- 
-.arrow:before{
-    content: '';
-    width: 20px;
-    height: 20px;
-    top: 50%;
-    margin: -10px 0 0 -10px;
-    border-left: none;
-    border-top: none;
-    border-right: 1px #fff solid;
-    border-bottom: 1px #fff solid;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-name: arrow;
 }
 
 // categories.html
@@ -260,7 +288,6 @@ nav{
     }
   }
 }
-//filter show
 
 .slick-prev{
   left: 0.5em;
@@ -278,17 +305,9 @@ nav{
   box-shadow: 0 0 0 2px rgb(255 255 255 / 85%), 0 0 7px 7px rgb(0 0 0 / 25%), inset 0 0 40px 2px rgb(0 0 0 / 25%) !important;
 }
 
-// .zoom{
-//   &:hover{
-//     cursor: none !important;
-//   }
-// }
-
 .fa-magnifying-glass{
   cursor: pointer;
 }
-
-//
 #dropdown{
   position: relative;
   display: none;
@@ -409,6 +428,24 @@ nav{
 .refContainer{
   position: relative;
 }
+.bg-darker{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.bg-newer{
+  background-color: #252525;
+}
+.bg-darkBlue{
+  background-color: $big-stone;
+}
+// nav
+nav{
+  z-index: 9 !important;
+}
+ul{
+  a{
+    color: white;
+  }
+}
 @media screen and (max-width: 1440px) {
   .catItems{
     .catItem{
@@ -432,6 +469,76 @@ nav{
   }
 }
 @media screen and (max-width: 770px){
+  main{
+    #storeDD{
+      #ddLogoFix{
+        #ddLogo{
+          .text{
+            width: 100%;
+            h1{
+              font-size: 65px;
+            }
+          }
+        }
+      }
+    }
+    #ponudeRental{
+      display: none;
+    }
+    #opisRental{
+      background-color: transparent !important;
+      .opisRentalShell{
+        width: 100%;
+        margin: 0px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 25vh;
+        .slikaOpis, .tekstOpis{
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          top: 0px;
+          left: 0px;
+          padding: 0px;
+        }
+        .slikaOpis{
+          img{
+            width: 100%;
+            filter: brightness(40%);
+          }
+        }
+        .tekstOpis{
+          padding: 50px;
+          p{
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    #popustInfo{
+      .popustHeader{
+        margin-left: 0px;
+        text-align: center;
+
+      }
+      .popustTextSlika{
+        margin-bottom: 20px;
+        .popustText{
+          width: 100% !important;
+          text-align: center;
+        }
+        .popustSlika{
+          display: none;
+        }
+      } 
+    }
+    
+}
   #dropdownContent{
     left: -25%;
   }
@@ -453,20 +560,10 @@ nav{
   }
 }
 @media screen and (max-width: 430px) {
-  
   .slider-nav{
     display: none;
   }
   #bannerCarousel{
     width: 75%;
   }
-}
-.bg-darker{
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.bg-newer{
-  background-color: #252525;
-}
-.triWayWidth{
-  width: 100%;
 }

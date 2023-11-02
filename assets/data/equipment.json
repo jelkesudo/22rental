@@ -1,7 +1,7 @@
 [
     { "id": 9, "name": "Zoom F8n", "categoryId": 9, "price": 40.0, "image": "zoomf8n.jpg ,zoomf8n1.jpg" },
     { "id": 10, "name": "Zoom h6", "categoryId": 9, "price": 20.0, "image": "zoomh6.jpg" },
-    { "id": 11, "name": "RODE NTG3 +Blimp + Pecaljka", "categoryId": 11, "price": 20.0, "image": "RODENTG3.jpg ,RODENTG32.jpg" },
+    { "id": 11, "name": "RODE NTG3 + Blimp + Pecaljka", "categoryId": 11, "price": 20.0, "image": "RODENTG3.jpg ,RODENTG32.jpg" },
     { "id": 14, "name": "Zoom H1", "categoryId": 9, "price": 10.0, "image": "zoomh1.jpg" },
     { "id": 15, "name": "RODE Micro", "categoryId": 11, "price": 10.0, "image": "RODEMicro.jpg" },
     { "id": 17, "name": "Sony A74", "categoryId": 3, "price": 50.0, "image": "Sonya7.jpg" },

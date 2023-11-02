@@ -2,8 +2,16 @@
   background-color: rgb(21, 37, 54);
 }
 
+.fj-thatBlue {
+  color: #1b76df;
+}
+
 @font-face {
   font-family: "slike-sajt";
+  src: url("../fonts/Kanit-Medium.ttf");
+}
+@font-face {
+  font-family: "naslov-sajt";
   src: url("../fonts/Kanit-MediumItalic.ttf");
 }
 @keyframes arrow {
@@ -20,6 +28,7 @@
   padding: 0px;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  outline: 1px solid green;
 }
 
 ul {
@@ -40,6 +49,7 @@ a {
   transition: 0.5s;
 }
 a:hover {
+  color: #1b76df !important;
   text-decoration: none !important;
 }
 
@@ -48,46 +58,109 @@ p {
   padding: 0px !important;
 }
 
-.homeButton {
-  background-color: white;
-  padding: 10px 20px;
-  margin: 10px 0px;
-  border: none;
-  color: black;
+main #storeDD {
+  position: relative;
+  width: 100%;
 }
-
-#bannerCarousel {
-  z-index: 7;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 25%;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 50px 0px;
-}
-
-.carousel-item1 {
-  background-image: url("../img/one.jpg") !important;
-}
-
-.carousel-item2 {
-  background-image: url("../img/two.jpg") !important;
-}
-
-.carousel-item3 {
-  background-image: url("../img/three.jpg") !important;
-}
-
-nav {
-  z-index: 9 !important;
-}
-
-.carousel-item {
+main #storeDD #ddLogoFix {
+  display: flex;
+  width: 100%;
   height: 100vh;
-  background: no-repeat center center scroll;
-  background-size: cover;
+  justify-content: center;
+  align-items: center;
+}
+main #storeDD #ddLogoFix #ddLogo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+main #storeDD #ddLogoFix #ddLogo .text {
+  z-index: 5;
+  position: absolute;
+  width: 40%;
+  text-align: center;
+  margin: 0px auto;
+  justify-content: center;
+  align-items: center;
+}
+main #storeDD #ddLogoFix #ddLogo .text h1 {
+  color: white;
+  font-size: 100px;
+  font-family: "naslov-sajt" !important;
+}
+main #storeDD #ddLogoFix #ddLogo .particleImage {
+  z-index: 6;
+}
+main #storeDD #ddLogoFix #ddLogo .particleImage img {
+  width: 100%;
+}
+main #ponudeRental {
+  width: 60%;
+  margin: 0px auto;
+  background-color: orange;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+main #ponudeRental .velikePonude, main #ponudeRental .malePonude {
+  width: 48%;
+}
+main #ponudeRental .malePonude {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+main #ponudeRental .malePonude .malaPonuda {
+  width: 100%;
+  background-color: grey;
+}
+main #opisRental {
+  width: 100%;
+  background-color: #252525;
+}
+main #opisRental .opisRentalShell {
+  width: 80%;
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+main #opisRental .opisRentalShell .slikaOpis, main #opisRental .opisRentalShell .tekstOpis {
+  width: 48%;
+  padding: 20px;
+}
+main #opisRental .opisRentalShell .slikaOpis img {
+  width: 100%;
+}
+main #popustInfo {
+  width: 80%;
+  margin: 0px auto;
+}
+main #popustInfo .popustHeader {
+  padding-top: 30px;
+  width: 100%;
+}
+main #popustInfo .popustHeader h2 {
+  font-size: 3em;
+}
+main #popustInfo .popustTextSlika {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main #popustInfo .popustTextSlika .popustText {
+  width: 70%;
+}
+main #popustInfo .popustTextSlika .popustSlika {
+  width: 28%;
+  text-align: center;
+}
+main #popustInfo .popustTextSlika .popustSlika img {
+  width: 50%;
 }
 
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
@@ -102,13 +175,27 @@ nav {
   transition: all 150ms ease-in-out;
 }
 .catItems .catItem .card {
-  background-color: transparent;
+  background-color: rgba(79, 79, 79, 0.5) !important;
   color: white;
-  height: 22em;
 }
 .catItems .catItem .card img {
   padding: 15px;
   transition: all 150ms ease-in-out;
+}
+
+.soloCard {
+  background-color: rgba(79, 79, 79, 0.5) !important;
+  color: white;
+  text-align: center;
+}
+.soloCard img {
+  width: 50%;
+  padding: 15px;
+  transition: all 150ms ease-in-out;
+}
+
+.soloCard:hover img {
+  padding: 10px;
 }
 
 .catItems:hover > .catItem:hover {
@@ -122,82 +209,21 @@ nav {
   opacity: 0.5;
 }
 
-.info-img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin: 0px auto;
-  background-color: rgb(51, 51, 51);
-  padding: 25px 0px;
-  text-align: center;
-  transition: 0.5s;
+footer {
+  width: 100%;
 }
-.info-img p {
-  margin-top: 200px;
-  font-size: 2.5em;
-  font-weight: bold;
-}
-.info-img:hover {
-  background-color: #1b76df;
-}
-.info-img:hover p i {
-  color: #121212;
-}
-
-.info-heading {
-  padding-top: 10px;
-}
-
-.info-desc {
-  padding: 5px 20px;
-}
-
-.fj-footer {
+footer .fj-footer {
   width: 60%;
   margin: 0px auto;
 }
-.fj-footer .fj-footer-div {
+footer .fj-footer .fj-footer-div {
   border-left: 1px solid white;
 }
-.fj-footer .fj-footer-div ul {
+footer .fj-footer .fj-footer-div ul {
   margin-left: 20px;
 }
-.fj-footer .fj-footer-div ul li {
+footer .fj-footer .fj-footer-div ul li {
   padding: 10px 0px;
-}
-
-.arrow, .arrow:before {
-  position: absolute;
-  left: 50%;
-  z-index: 7;
-}
-
-.arrow {
-  width: 40px;
-  height: 40px;
-  top: 95vh;
-  margin: -20px 0 0 -20px;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  border-left: none;
-  border-top: none;
-  border-right: 2px #fff solid;
-  border-bottom: 2px #fff solid;
-}
-
-.arrow:before {
-  content: "";
-  width: 20px;
-  height: 20px;
-  top: 50%;
-  margin: -10px 0 0 -10px;
-  border-left: none;
-  border-top: none;
-  border-right: 1px #fff solid;
-  border-bottom: 1px #fff solid;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-name: arrow;
 }
 
 #selectCatPage {
@@ -393,6 +419,26 @@ nav {
   position: relative;
 }
 
+.bg-darker {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bg-newer {
+  background-color: #252525;
+}
+
+.bg-darkBlue {
+  background-color: rgb(21, 37, 54);
+}
+
+nav {
+  z-index: 9 !important;
+}
+
+ul a {
+  color: white;
+}
+
 @media screen and (max-width: 1440px) {
   .catItems .catItem .card {
     height: auto;
@@ -410,6 +456,62 @@ nav {
   }
 }
 @media screen and (max-width: 770px) {
+  main #storeDD #ddLogoFix #ddLogo .text {
+    width: 100%;
+  }
+  main #storeDD #ddLogoFix #ddLogo .text h1 {
+    font-size: 65px;
+  }
+  main #ponudeRental {
+    display: none;
+  }
+  main #opisRental {
+    background-color: transparent !important;
+  }
+  main #opisRental .opisRentalShell {
+    width: 100%;
+    margin: 0px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 25vh;
+  }
+  main #opisRental .opisRentalShell .slikaOpis, main #opisRental .opisRentalShell .tekstOpis {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+    left: 0px;
+    padding: 0px;
+  }
+  main #opisRental .opisRentalShell .slikaOpis img {
+    width: 100%;
+    filter: brightness(40%);
+  }
+  main #opisRental .opisRentalShell .tekstOpis {
+    padding: 50px;
+  }
+  main #opisRental .opisRentalShell .tekstOpis p {
+    font-size: 12px;
+  }
+  main #popustInfo .popustHeader {
+    margin-left: 0px;
+    text-align: center;
+  }
+  main #popustInfo .popustTextSlika {
+    margin-bottom: 20px;
+  }
+  main #popustInfo .popustTextSlika .popustText {
+    width: 100% !important;
+    text-align: center;
+  }
+  main #popustInfo .popustTextSlika .popustSlika {
+    display: none;
+  }
   #dropdownContent {
     left: -25%;
   }
@@ -435,15 +537,4 @@ nav {
   #bannerCarousel {
     width: 75%;
   }
-}
-.bg-darker {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.bg-newer {
-  background-color: #252525;
-}
-
-.triWayWidth {
-  width: 100%;
 }/*# sourceMappingURL=style.css.map */

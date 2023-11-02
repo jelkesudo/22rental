@@ -78,10 +78,32 @@ window.onload = function(){
             $("#dropdownContent").hide();
         });
     });
-    if (window.location.pathname == "/" || window.location.pathname == "/index.html"){
+    if (window.location.pathname == "/" || window.location.pathname == "/index.html" || window.location.pathname == "/indexcopy.html"){
+        nextParticle = new NextParticle(document.all.particle22);
+        if(window.innerWidth <= 430){
+            nextParticle.width = window.innerWidth;
+            nextParticle.height = window.innerHeight;
+        }
+        else{
+            nextParticle.width = window.innerWidth - 200;
+            nextParticle.height = window.innerHeight - 300;
+        }
+        window.onresize = function() {
+            if(window.innerWidth <= 430){
+                nextParticle.width = window.innerWidth;
+                nextParticle.height = window.innerHeight;
+            }
+            else{
+                nextParticle.width = window.innerWidth - 200;
+                nextParticle.height = window.innerHeight - 300;
+            }
+            nextParticle.start();
+        };
+        const progressBar = document.getElementById("progressbar");
         const navigation = document.getElementById("navBarTrans");
         const navigationPre = "rgba(21, 37, 54,";
         const navigationPost = ")";
+        progressBar.style.height = 1 + "%";
         navigation.style.backgroundColor = navigationPre + 0 + navigationPost;
         window.onscroll = () => {
             const scroll = document.documentElement.scrollTop;
@@ -185,7 +207,7 @@ window.onload = function(){
         let myParam = urlParams.get('searchParam');
         $('#searchTitle').html(`<h1>Oprema pretrazena sa "${myParam}"</h1>`);
         ajaxCallBack("assets/data/equipment.json", "get", "", function(result){
-            let searchParam = $("#searchDo").val();
+            let searchParam = myParam;
             result = result.filter((x) => {
                 if(x.name.toLowerCase().indexOf(searchParam.trim().toLowerCase()) != -1) {
                     return x;
@@ -272,7 +294,7 @@ function printItemData(){
 }
 
 function itemPrint(data){
-    html = `<div id="iksic">X</div>
+    html = `<div id="iksic">x</div>
     <div class="row toCenter">
       <div class="col-12 col-lg-6">
         <div class="prodImg">
@@ -346,9 +368,9 @@ function printFooter(){
     <div class="row py-3 fj-footer d-flex justify-content-around">
       <div class="col-12 col-lg-4 fj-footer-div">
         <ul>
-          <li><i class="fa-brands fa-instagram"></i> Lorem ipsum</li>
-          <li><i class="fa-brands fa-facebook"></i> Lorem ipsum</li>
-          <li><i class="fa-brands fa-twitter"></i> Lorem ipsum</li>
+            <a href="https://www.instagram.com/filmrental22/ target="_blank"><li><i class="fa-brands fa-instagram"></i> Instagram</li></a>
+            <li><i class="fa-brands fa-facebook"></i> Lorem ipsum</li>
+            <li><i class="fa-brands fa-twitter"></i> Lorem ipsum</li>
         </ul>
       </div>
       <div class="col-12 col-lg-4 fj-footer-div">
