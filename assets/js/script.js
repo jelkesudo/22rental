@@ -78,7 +78,7 @@ window.onload = function(){
             $("#dropdownContent").hide();
         });
     });
-    if (window.location.pathname == "/" || window.location.pathname == "/index.html" || window.location.pathname == "/indexcopy.html"){
+    if (window.location.pathname == "/22rental" || window.location.pathname == "/22rental/index.html"){
         nextParticle = new NextParticle(document.all.particle22);
         if(window.innerWidth <= 430){
             nextParticle.width = window.innerWidth;
@@ -134,7 +134,7 @@ window.onload = function(){
             $("#printNew").html(html);
         });
     }
-    if (window.location.pathname == "/categories.html"){
+    if (window.location.pathname == "/22rental/categories.html"){
         ajaxCallBack("assets/data/categories.json", "get", "", function(result){
             console.log(result);
             let html = "";
@@ -158,7 +158,7 @@ window.onload = function(){
             $("#printCategories").html(html);
         });
     }
-    if (window.location.pathname == "/items.html"){
+    if (window.location.pathname == "/22rental/items.html"){
         ajaxCallBack("assets/data/categories.json", "get", "", function(result){
             let urlParams = new URLSearchParams(window.location.search);
             let myParam = urlParams.get('category');
@@ -172,7 +172,7 @@ window.onload = function(){
             printItemData();
         });
     }
-    if (window.location.pathname == "/subcategories.html"){
+    if (window.location.pathname == "/22rental/subcategories.html"){
         ajaxCallBack("assets/data/categories.json", "get", "", function(result){
             let urlParams = new URLSearchParams(window.location.search);
             let myParam = urlParams.get('category');
@@ -202,7 +202,7 @@ window.onload = function(){
             $('#printSubCats').html(html);
         });
     }
-    if (window.location.pathname == "/search.html"){
+    if (window.location.pathname == "/22rental/search.html"){
         let urlParams = new URLSearchParams(window.location.search);
         let myParam = urlParams.get('searchParam');
         $('#searchTitle').html(`<h1>Oprema pretrazena sa "${myParam}"</h1>`);
