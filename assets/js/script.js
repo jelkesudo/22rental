@@ -1,4 +1,3 @@
-console.log(window.location.href);
 window.onload = function(){
     AOS.init();
     printFooter();
@@ -79,7 +78,7 @@ window.onload = function(){
             $("#dropdownContent").hide();
         });
     });
-    if (window.location.pathname == "/22rental" || window.location.pathname == "/22rental/index.html"){
+    if (window.location.pathname == "/" || window.location.pathname == "/index.html" || window.location.pathname == "/indexcopy.html"){
         nextParticle = new NextParticle(document.all.particle22);
         if(window.innerWidth <= 430){
             nextParticle.width = window.innerWidth;
@@ -99,6 +98,8 @@ window.onload = function(){
                 nextParticle.height = window.innerHeight - 300;
             }
             nextParticle.start();
+            nextParticle.slideDelay = 10000000;
+            nextParticle.shuffle = null;
         };
         const progressBar = document.getElementById("progressbar");
         const navigation = document.getElementById("navBarTrans");
@@ -113,29 +114,30 @@ window.onload = function(){
             let prec = scrolled / 500 * 10;
             navigation.style.backgroundColor = navigationPre + prec + navigationPost;
         };
-        ajaxCallBack("assets/data/equipment.json", "get", "", function(result){
-            let html = "";
-            for(let i = result.length - 1; i > result.length - 4; i--){
-                let slika = 'camera.png';
-                if(result[i].image != null){
-                    arrayPic = result[i].image.split(" ,");
-                    slika = arrayPic[0];
-                }
-                html += `<div class="col-12 col-sm-6 col-lg-3 catItem mb-3" data-id="${i.id}">
-                <a href="items.html?category=${result[i].categoryId}&item=${result[i].id}&cat">
-                <div class="card">
-                  <img src="assets/data/products/${slika}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title text-center">${result[i].name}</h5>
-                  </div>
-                </div>
-                </a>
-              </div>`;
-            }
-            $("#printNew").html(html);
-        });
+        // kod za najskorija tri artikla
+        // ajaxCallBack("assets/data/equipment.json", "get", "", function(result){
+        //     let html = "";
+        //     for(let i = result.length - 1; i > result.length - 4; i--){
+        //         let slika = 'camera.png';
+        //         if(result[i].image != null){
+        //             arrayPic = result[i].image.split(" ,");
+        //             slika = arrayPic[0];
+        //         }
+        //         html += `<div class="col-12 col-sm-6 col-lg-3 catItem mb-3" data-id="${i.id}">
+        //         <a href="items.html?category=${result[i].categoryId}&item=${result[i].id}">
+        //         <div class="card">
+        //           <img src="assets/data/products/${slika}" class="card-img-top" alt="...">
+        //           <div class="card-body">
+        //             <h5 class="card-title text-center">${result[i].name}</h5>
+        //           </div>
+        //         </div>
+        //         </a>
+        //       </div>`;
+        //     }
+        //     $("#printNew").html(html);
+        // });
     }
-    if (window.location.pathname == "/22rental/categories.html"){
+    if (window.location.pathname == "/categories.html"){
         ajaxCallBack("assets/data/categories.json", "get", "", function(result){
             console.log(result);
             let html = "";
@@ -159,7 +161,7 @@ window.onload = function(){
             $("#printCategories").html(html);
         });
     }
-    if (window.location.pathname == "/22rental/items.html"){
+    if (window.location.pathname == "/items.html"){
         ajaxCallBack("assets/data/categories.json", "get", "", function(result){
             let urlParams = new URLSearchParams(window.location.search);
             let myParam = urlParams.get('category');
@@ -173,7 +175,7 @@ window.onload = function(){
             printItemData();
         });
     }
-    if (window.location.pathname == "/22rental/subcategories.html"){
+    if (window.location.pathname == "/subcategories.html"){
         ajaxCallBack("assets/data/categories.json", "get", "", function(result){
             let urlParams = new URLSearchParams(window.location.search);
             let myParam = urlParams.get('category');
@@ -203,7 +205,7 @@ window.onload = function(){
             $('#printSubCats').html(html);
         });
     }
-    if (window.location.pathname == "/22rental/search.html"){
+    if (window.location.pathname == "/search.html"){
         let urlParams = new URLSearchParams(window.location.search);
         let myParam = urlParams.get('searchParam');
         $('#searchTitle').html(`<h1>Oprema pretrazena sa "${myParam}"</h1>`);
@@ -223,7 +225,7 @@ window.onload = function(){
                 }
                 html += `
                 <div class="col-12 col-sm-6 col-lg-3 catItem mb-3" data-id="${i.id}">
-                <a href="items.html?category=${result[i].categoryId}&item=${result[i].id}&cat">
+                <a href="items.html?category=${result[i].categoryId}&item=${result[i].id}">
                 <div class="card">
                   <img src="assets/data/products/${slika}" class="card-img-top" alt="...">
                   <div class="card-body">
@@ -295,24 +297,22 @@ function printItemData(){
 }
 
 function itemPrint(data){
-    html = `<div id="iksic">x</div>
+    html = `<div id="iksic" class="box">X</div>
     <div class="row toCenter">
-      <div class="col-12 col-lg-6">
+      <div class="col-12 col-lg-6 box">
         <div class="prodImg">
             ${printImageItem(data.image)}
         </div>
       </div>
-      <div class="col-12 col-lg-6 p-5">
+      <div class="col-12 col-lg-6 p-5 box">
         <h2>${data.name}</h2>
         <h5>${data.price} € / dan</h5>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, tenetur aspernatur? Nisi officiis autem tempora doloremque, minus odit assumenda consequatur quidem laborum, error, minima veritatis provident ex et reprehenderit. Minima.</p>
       </div>
     </div>`;
     $("#itemShow").html(html);
-        // $('.zoom').magnify({
-            
-        //   });
-        $('.zoom').zoom({magnify: 1.3});
+    showBoxItems();
+    $('.zoom').zoom({magnify: 1.3});
     $('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -332,6 +332,17 @@ function itemPrint(data){
         $("#itemShow").animate({
             height: 'toggle'
           });
+    });
+}
+function showBoxItems(){
+    const boxes = document.querySelectorAll(".box");
+    let delay = 0;
+    boxes.forEach((box, index) => {
+        
+        setTimeout(() => {
+            box.style.opacity = 1;
+        }, delay);
+        delay += 300;
     });
 }
 function printImageItem(arrayPic){
@@ -369,7 +380,7 @@ function printFooter(){
     <div class="row py-3 fj-footer d-flex justify-content-around">
       <div class="col-12 col-lg-4 fj-footer-div">
         <ul>
-            <a href="https://www.instagram.com/filmrental22/ target="_blank"><li><i class="fa-brands fa-instagram"></i> Instagram</li></a>
+            <a href="https://www.instagram.com/filmrental22/" target="_blank"><li><i class="fa-brands fa-instagram"></i> Instagram</li></a>
             <li><i class="fa-brands fa-facebook"></i> Lorem ipsum</li>
             <li><i class="fa-brands fa-twitter"></i> Lorem ipsum</li>
         </ul>

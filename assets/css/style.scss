@@ -36,7 +36,7 @@ $thatBlue: #1b76df;
     padding: 0px;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    outline: 1px solid green;
+    //outline: 1px solid green;
 }
 ul{
     list-style-type: none;
@@ -101,26 +101,6 @@ main{
         }
       }
     }
-    #ponudeRental{
-      width: 60%;
-      margin: 0px auto;
-      background-color: orange;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      .velikePonude, .malePonude{
-        width: 48%;
-      }
-      .malePonude{
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        .malaPonuda{
-          width: 100%;
-          background-color: grey;
-        }
-      }
-    }
     #opisRental{
       width: 100%;
       background-color: #252525;
@@ -178,11 +158,13 @@ main{
 .catItems{
   pointer-events: none;
   .catItem{
+    cursor: pointer;
     pointer-events: auto;
     transition: all 150ms ease-in-out;
     .card{
       background-color: rgba(79, 79, 79, 0.5) !important;
       color: white;
+      height: 22em;
       img{
         padding: 15px;
         transition: all 150ms ease-in-out;
@@ -190,23 +172,6 @@ main{
     }
   }
 }
-
-.soloCard{
-  background-color: rgba(79, 79, 79, 0.5) !important;
-  color: white;
-  text-align: center;
-  img{
-    width: 50%;
-    padding: 15px;
-    transition: all 150ms ease-in-out;
-  }
-}
-.soloCard:hover {
-    img{
-      padding: 10px;
-    }
-}
-
 
 .catItems:hover > .catItem:hover {
   z-index: 7;
@@ -279,6 +244,10 @@ footer{
       }
     }
   }
+}
+.box{
+  opacity: 0;
+  transition: 0.5s;
 }
 //carousel item
 .slider-nav{
@@ -432,10 +401,44 @@ footer{
   background-color: rgba(0, 0, 0, 0.5);
 }
 .bg-newer{
-  background-color: #252525;
+  background-color: #252525 !important;
 }
 .bg-darkBlue{
   background-color: $big-stone;
+}
+//carousel main page
+.fj-cover1{
+  background-image: url('../img/one.jpg') !important;
+  background-size: cover !important;
+  background-position-y: center !important;
+}
+.fj-cover2{
+  background-image: url('../img/one.jpg') !important;
+  background-size: cover !important;
+  background-position-y: center !important;
+}
+.fj-cover3{
+  background-image: url('../img/one.jpg') !important;
+  background-size: cover !important;
+  background-position-y: center !important;
+}
+.color-button {
+  background: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.5s, color 0.5s; 
+  background-size: 100% 0;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  &:hover {
+    background: #fff;
+    color: #3498db;
+    background-size: 100% 100%;
+  }
 }
 // nav
 nav{
@@ -482,9 +485,6 @@ ul{
         }
       }
     }
-    #ponudeRental{
-      display: none;
-    }
     #opisRental{
       background-color: transparent !important;
       .opisRentalShell{
@@ -514,9 +514,6 @@ ul{
         }
         .tekstOpis{
           padding: 50px;
-          p{
-            font-size: 12px;
-          }
         }
       }
     }
@@ -567,3 +564,49 @@ ul{
     width: 75%;
   }
 }
+
+// <div class="container-fluid px-0 w-100">
+//       <div class="row">
+//           <div class="col-12">
+//               <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+//                   <div class="carousel-inner">
+//                     <div class="carousel-item active">
+//                       <div class="jumbotron jumbotron-fluid bg-newer fj-cover1 mb-0">
+//                           <div class="container py-5 fj-pozadina text-center">
+//                             <h2 class="display-4 py-3 text-light">Oprema broj 1</h2>
+//                             <p class="lead">A new, refreshed edition to the famous Brackeys line of top noch keyboards!</p>
+//                             <a href="premade.html" class="btn btn-primary px-5 py-2">Shop now</a>
+//                           </div>
+//                       </div>
+//                     </div>
+//                     <div class="carousel-item">
+//                       <div class="jumbotron jumbotron-fluid bg-newer fj-cover2 mb-0">
+//                           <div class="container py-5 fj-pozadina text-center">
+//                             <h2 class="display-4 py-3 text-light">Oprema broj 2</h2>
+//                             <p class="lead">Know what is in your keyboard, even without oppening it. Mackeys X-ray avaiable now!</p>
+//                             <a href="premade.html" class="btn btn-primary px-5 py-2">Shop now</a>
+//                           </div>
+//                       </div>
+//                     </div>
+//                     <div class="carousel-item">
+//                       <div class="jumbotron jumbotron-fluid bg-newer fj-cover3 mb-0">
+//                           <div class="container py-5 fj-pozadina text-center">
+//                             <h2 class="display-4 py-3 text-light">Oprema broj 3</h2>
+//                             <p class="lead">From the best, kit for everyone, begginers and professionals!</p>
+//                             <a href="kits.html" class="btn btn-primary px-5 py-2">Shop now</a>
+//                           </div>
+//                       </div>
+//                     </div>
+//                   </div>
+//                   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+//                     <span class="carousel-control-prev-icon fj-prev-black" aria-hidden="true"></span>
+//                     <span class="sr-only">Previous</span>
+//                   </a>
+//                   <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+//                     <span class="carousel-control-next-icon fj-next-black" aria-hidden="true"></span>
+//                     <span class="sr-only">Next</span>
+//                   </a>
+//                 </div>
+//           </div>
+//       </div>
+//   </div>

@@ -28,7 +28,6 @@
   padding: 0px;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  outline: 1px solid green;
 }
 
 ul {
@@ -96,26 +95,6 @@ main #storeDD #ddLogoFix #ddLogo .particleImage {
 main #storeDD #ddLogoFix #ddLogo .particleImage img {
   width: 100%;
 }
-main #ponudeRental {
-  width: 60%;
-  margin: 0px auto;
-  background-color: orange;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-main #ponudeRental .velikePonude, main #ponudeRental .malePonude {
-  width: 48%;
-}
-main #ponudeRental .malePonude {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-main #ponudeRental .malePonude .malaPonuda {
-  width: 100%;
-  background-color: grey;
-}
 main #opisRental {
   width: 100%;
   background-color: #252525;
@@ -171,31 +150,18 @@ main #popustInfo .popustTextSlika .popustSlika img {
   pointer-events: none;
 }
 .catItems .catItem {
+  cursor: pointer;
   pointer-events: auto;
   transition: all 150ms ease-in-out;
 }
 .catItems .catItem .card {
   background-color: rgba(79, 79, 79, 0.5) !important;
   color: white;
+  height: 22em;
 }
 .catItems .catItem .card img {
   padding: 15px;
   transition: all 150ms ease-in-out;
-}
-
-.soloCard {
-  background-color: rgba(79, 79, 79, 0.5) !important;
-  color: white;
-  text-align: center;
-}
-.soloCard img {
-  width: 50%;
-  padding: 15px;
-  transition: all 150ms ease-in-out;
-}
-
-.soloCard:hover img {
-  padding: 10px;
 }
 
 .catItems:hover > .catItem:hover {
@@ -260,6 +226,11 @@ footer .fj-footer .fj-footer-div ul li {
 }
 #itemShow .toCenter .prodImg img {
   width: 100%;
+}
+
+.box {
+  opacity: 0;
+  transition: 0.5s;
 }
 
 .slider-nav div img {
@@ -424,11 +395,48 @@ footer .fj-footer .fj-footer-div ul li {
 }
 
 .bg-newer {
-  background-color: #252525;
+  background-color: #252525 !important;
 }
 
 .bg-darkBlue {
   background-color: rgb(21, 37, 54);
+}
+
+.fj-cover1 {
+  background-image: url("../img/one.jpg") !important;
+  background-size: cover !important;
+  background-position-y: center !important;
+}
+
+.fj-cover2 {
+  background-image: url("../img/one.jpg") !important;
+  background-size: cover !important;
+  background-position-y: center !important;
+}
+
+.fj-cover3 {
+  background-image: url("../img/one.jpg") !important;
+  background-size: cover !important;
+  background-position-y: center !important;
+}
+
+.color-button {
+  background: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.5s, color 0.5s;
+  background-size: 100% 0;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+.color-button:hover {
+  background: #fff;
+  color: #3498db;
+  background-size: 100% 100%;
 }
 
 nav {
@@ -462,9 +470,6 @@ ul a {
   main #storeDD #ddLogoFix #ddLogo .text h1 {
     font-size: 65px;
   }
-  main #ponudeRental {
-    display: none;
-  }
   main #opisRental {
     background-color: transparent !important;
   }
@@ -494,9 +499,6 @@ ul a {
   }
   main #opisRental .opisRentalShell .tekstOpis {
     padding: 50px;
-  }
-  main #opisRental .opisRentalShell .tekstOpis p {
-    font-size: 12px;
   }
   main #popustInfo .popustHeader {
     margin-left: 0px;
