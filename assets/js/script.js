@@ -78,7 +78,7 @@ window.onload = function(){
             $("#dropdownContent").hide();
         });
     });
-    if (window.location.pathname == "/" || window.location.pathname == "/index.html" || window.location.pathname == "/indexcopy.html"){
+    if (window.location.pathname == "/22rental" || window.location.pathname == "/22rental/index.html" || window.location.pathname == "/indexcopy.html"){
         nextParticle = new NextParticle(document.all.particle22);
         if(window.innerWidth <= 430){
             nextParticle.width = window.innerWidth;
@@ -137,7 +137,7 @@ window.onload = function(){
         //     $("#printNew").html(html);
         // });
     }
-    if (window.location.pathname == "/categories.html"){
+    if (window.location.pathname == "/22rental/categories.html"){
         ajaxCallBack("assets/data/categories.json", "get", "", function(result){
             console.log(result);
             let html = "";
