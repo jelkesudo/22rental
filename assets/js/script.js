@@ -79,7 +79,7 @@ window.onload = function(){
             $("#dropdownContent").hide();
         });
     });
-    if (window.location.pathname == "/22rental" || window.location.pathname == "/22rental/index.html" || window.location.pathname == "/indexcopy.html"){
+    if (window.location.pathname == "/22rental/" || window.location.pathname == "/22rental/index.html" || window.location.pathname == "/indexcopy.html"){
         nextParticle = new NextParticle(document.all.particle22);
         if(window.innerWidth <= 430){
             nextParticle.width = window.innerWidth;
