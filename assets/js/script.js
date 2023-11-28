@@ -80,28 +80,11 @@ window.onload = function(){
         });
     });
     if (window.location.pathname == "/22rental/" || window.location.pathname == "/22rental/index.html"){
-        nextParticle = new NextParticle(document.all.particle22);
-        if(window.innerWidth <= 430){
-            nextParticle.width = window.innerWidth;
-            nextParticle.height = window.innerHeight;
-        }
-        else{
-            nextParticle.width = window.innerWidth - 200;
-            nextParticle.height = window.innerHeight - 300;
-        }
-        window.onresize = function() {
-            if(window.innerWidth <= 430){
-                nextParticle.width = window.innerWidth;
-                nextParticle.height = window.innerHeight;
-            }
-            else{
-                nextParticle.width = window.innerWidth - 200;
-                nextParticle.height = window.innerHeight - 300;
-            }
-            nextParticle.start();
-            nextParticle.slideDelay = 10000000;
-            nextParticle.shuffle = null;
-        };
+        nextParticle = new NextParticle({
+            image: document.all.particle22,
+            width: window.innerWidth - 10,
+            height: window.innerHeight - 10
+        });
         const progressBar = document.getElementById("progressbar");
         const navigation = document.getElementById("navBarTrans");
         const navigationPre = "rgba(21, 37, 54,";
