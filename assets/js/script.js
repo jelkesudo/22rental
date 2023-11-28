@@ -80,9 +80,6 @@ window.onload = function(){
         });
     });
     if (window.location.pathname == "/22rental/" || window.location.pathname == "/22rental/index.html"){
-	if(window.innerWidth <= 430){
-            $("#particle22").attr("data-disable-interaction", "true");
-        }
         nextParticle = new NextParticle(document.all.particle22);
         if(window.innerWidth <= 430){
             nextParticle.width = window.innerWidth;
