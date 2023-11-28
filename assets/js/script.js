@@ -1,3 +1,4 @@
+console.log(window.location.pathname);
 window.onload = function(){
     AOS.init();
     printFooter();
