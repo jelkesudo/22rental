@@ -94,6 +94,7 @@ main #storeDD #ddLogoFix #ddLogo .particleImage {
 }
 main #storeDD #ddLogoFix #ddLogo .particleImage img {
   width: 100%;
+  display: none;
 }
 main #opisRental {
   width: 100%;
@@ -116,7 +117,7 @@ main #opisRental .opisRentalShell .slikaOpis img {
 }
 main #popustInfo {
   width: 80%;
-  margin: 0px auto;
+  margin: 10px auto;
 }
 main #popustInfo .popustHeader {
   padding-top: 30px;
@@ -480,7 +481,7 @@ ul a {
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 25vh;
+    height: 30vh;
   }
   main #opisRental .opisRentalShell .slikaOpis, main #opisRental .opisRentalShell .tekstOpis {
     width: 100%;
@@ -499,6 +500,12 @@ ul a {
   }
   main #opisRental .opisRentalShell .tekstOpis {
     padding: 50px;
+  }
+  main #opisRental .opisRentalShell .tekstOpis p {
+    font-size: 14px;
+  }
+  main #popustInfo {
+    padding: 20px 0px;
   }
   main #popustInfo .popustHeader {
     margin-left: 0px;

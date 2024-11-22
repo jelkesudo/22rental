@@ -1,31 +1,151 @@
 [
-    { "id": 9, "name": "Zoom F8n", "categoryId": 9, "price": 40.0, "image": "zoomf8n.jpg ,zoomf8n1.jpg" },
-    { "id": 10, "name": "Zoom h6", "categoryId": 9, "price": 20.0, "image": "zoomh6.jpg" },
-    { "id": 11, "name": "RODE NTG3 + Blimp + Pecaljka", "categoryId": 11, "price": 20.0, "image": "RODENTG3.jpg ,RODENTG32.jpg" },
-    { "id": 14, "name": "Zoom H1", "categoryId": 9, "price": 10.0, "image": "zoomh1.jpg" },
-    { "id": 15, "name": "RODE Micro", "categoryId": 11, "price": 10.0, "image": "RODEMicro.jpg" },
-    { "id": 17, "name": "Sony A74", "categoryId": 3, "price": 50.0, "image": "Sonya7.jpg" },
-    { "id": 23, "name": "Sigma 24-70 2.8 ff", "categoryId": 14, "price": 20.0, "image": "SIGMA24-70mmobjektiv.jpg ,SIGMA24-70mmobjektiv1.jpg ,SIGMA24-70mmobjektiv2.jpg" },
-    { "id": 24, "name": "Canon FD 50mm f1.4 ff", "categoryId": 14, "price": 10.0, "image": "CanonFD50mmf1.4.jpg" },
-    { "id": 25, "name": "Sigma 16mm 1.4 crop (19mm na ff)", "categoryId": 14, "price": 20.0, "image": "Sigma16mm1.4crop(19mm na ff).jpg ,Sigma16mm1.4crop(19mm na ff)2.jpg" },
-    { "id": 27, "name": "Referentni monitor feelworld LUT6 (sa cage-om)", "categoryId": 4, "price": 30.0, "image": "ReferentnimonitorfeelworldLUT6.jpg" },
-    { "id": 31, "name": "Godox sl-60w", "categoryId": 5, "price": 10.0, "image": "GodoxSL60w.jpg" },
-    { "id": 32, "name": "Godox vl 150", "categoryId": 5, "price": 20.0, "image": "Godoxvl150.jpg ,Godoxvl1502.jpg" },
-    { "id": 33, "name": "Softbox godox 120cm", "categoryId": 5, "price": 10.0, "image": "softboxgodox120cmi90cm.jpg" },
-    { "id": 34, "name": "Softbox godox 90cm", "categoryId": 5, "price": 10.0, "image": "softboxgodox120cmi90cm.jpg" },
-    { "id": 36, "name": "C stand sa boom-om", "categoryId": 5, "price": 15.0, "image": "Cstandsaboomom.jpg" },
-    { "id": 37, "name": "Stalak za rasvetu (3m)", "categoryId": 5, "price": 10.0, "image": "Stalakzarasvetu(3m).jpg" },
-    { "id": 42, "name": "DOLLY", "categoryId": 7, "price": 30.0, "image": null },
-    { "id": 46, "name": "Shoulder rig lanparte sa mehanickim sarfom", "categoryId": 7, "price": 30.0, "image": "Shoulderriglanpartesamehanickim.jpg ,Shoulderriglanpartesamehanickim2.jpg" },
-    { "id": 47, "name": "Zhiyun crane 2 gimbal", "categoryId": 7, "price": 30.0, "image": "ZhiynCrane2gimbal.jpg ,ZhiynCrane2gimbal2.jpg" },
-    { "id": 48, "name": "Variable ND fitler 2-400 67mm", "categoryId": 8, "price": 5.0, "image": "NDFilter.jpg" },
-    { "id": 49, "name": "Polarizing filter 67mm", "categoryId": 8, "price": 5.0, "image": "Polarizingfilter67mm.jpg" },
-    { "id": 50, "name": "Godox TL 60 tube Rgb light", "categoryId": 5, "price": 30.0, "image": "GodoxTL60tubeRgblight.jpg" },
-    { "id": 51, "name": "Dracast 30W", "categoryId": 5, "price": 15.0, "image": "Dracast30W.jpg" },
-    { "id": 52, "name": "Kaciga za kameru", "categoryId": 7, "price": 10.0, "image": null },
-    { "id": 53, "name": "Objektiv Canon 200mm f4", "categoryId": 14, "price": 10.0, "image": null },
-    { "id": 54, "name": "1st AC bag kit", "categoryId": 8, "price": 20.0, "image": null },
-    { "id": 55, "name": "Godox V 860 II ttI", "categoryId": 8, "price": 15.0, "image": "GODOXV860IIttI.jpg ,GODOXV860IIttI2.jpg" },
-    { "id": 56, "name": "Godox dome Softbox 95cm", "categoryId": 5, "price": 10.0, "image": null },
-    { "id": 57, "name": "Softbox kvadrat 60x60cm", "categoryId": 5, "price": 10.0, "image": "GODOXSoftbox60x60.jpg ,GODOXSoftbox60x602.jpg" }
+    {
+        "id": 9,
+        "name": "Zoom F8n",
+        "description": "Zoom F8n je višekanalni digitalni audio snimac koji se istice svojom visokom kvalitetom snimanja i fleksibilnošcu. Sa osam nezavisnih XLR/TRS ulaza, omogucava snimanje do osam kanala istovremeno, pružajuci profesionalni nivo performansi za produkciju zvuka. Opremljen je sa širokim spektrom naprednih funkcija, ukljucujuci visoko kvalitetne pretpojacala sa niskim nivoom buke, 24-bitni/192kHz AD konverziju, i ugradeni limitatori za zaštitu od preopterecenja. Pored toga, F8n ima razne audio rutiranje i kontrolne mogucnosti, ukljucujuci mogucnost podešavanja nivoa snimanja za svaki kanal pojedinacno. Torba koja dolazi uz njega je dizajnirana da osigura sigurnost i prakticnost prilikom nošenja i skladištenja, sa dovoljno prostora za sam uredaj, dodatnu opremu i dodatne kablove. Zahvaljujuci svojoj robustnoj konstrukciji i intuitivnom korisnickom interfejsu, Zoom F8n + Zoom Torba je idealan izbor za profesionalce u oblasti zvuka koji zahtevaju pouzdanost, visok kvalitet i prakticnost u radu, bilo da se radi o filmskoj produkciji, snimanju muzike ili drugim audio aplikacijama.",
+        "categoryId": 9,
+        "price": 40.0,
+        "image": "zoomf8n.jpg ,zoomf8n1.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Zoom h6",
+        "description": "Zoom H6 je kompaktni i prenosivi digitalni audio snimac koji pruža visokokvalitetno snimanje zvuka u razlicitim situacijama. Sa svojih šest nezavisnih XLR/TRS ulaza, omogucava snimanje do šest kanala istovremeno, pružajuci profesionalni nivo performansi za produkciju zvuka. Ugradeni su visokokvalitetni mikrofoni XY i MS, koji omogucavaju razlicite nacine snimanja, kao i mogucnost prikljucivanja eksternih mikrofona za dodatnu fleksibilnost. H6 takode nudi mogucnost snimanja visokokvalitetnog zvuka do 24-bitne/96kHz rezolucije, sa niskim nivoom buke i visokom dinamickom razlikom. Opremljen je i sa velikim i jasnim LCD ekranom koji olakšava navigaciju kroz menije i podešavanje parametara snimanja. Sa mogucnošcu zamene mikrofona i dodatkom eksternih modula kao što su eksterni mikrofoni ili dodatni ulazi, H6 pruža visok stepen prilagodljivosti i proširivosti. Ovaj snimac je idealan za razlicite namene, ukljucujuci snimanje muzike, podcaste, novinarske intervjue, filmsku produkciju i mnoge druge audio aplikacije, pružajuci pouzdanost, kvalitet i prakticnost u radu.",
+        "categoryId": 9,
+        "price": 20.0,
+        "image": "zoomh6.jpg"
+    },
+    {
+        "id": 11,
+        "name": "RODE NTG3 +Blimp + Pecaljka",
+        "description": "RODE NTG3 je vrhunski shotgun mikrofon namenjen profesionalnom snimanju zvuka u filmovima, TV emisijama i drugim audio produkcijama. Karakteriše ga kvalitetno usmereno snimanje zvuka u obliku kardioide, što omogucava fokusiranje na željeni zvuk dok istovremeno smanjuje neželjene zvuke iz okoline. Mikrofon pruža izuzetnu jasnocu i definiciju zvuka, sa širokim frekvencijskim opsegom i niskim nivoom buke. RODE Boom Pole je teleskopska šipka koja omogucava precizno pozicioniranje mikrofona u razlicitim snimcima, dok Blimp x1 služi zaštiti mikrofona od vetra i vibracija, osiguravajuci cist zvuk cak i u spoljašnjim uslovima. Kombinacija ovih proizvoda pruža kompletno rešenje za profesionalce u audio produkciji, obezbedujuci pouzdanost i prakticnost. Ovaj set je idealan za snimanje u razlicitim situacijama kao što su filmska produkcija, televizijske emisije, dokumentarci, reklame i druge audio-vizuelne projekte gde je potrebna visokokvalitetna audio produkcija.",
+        "categoryId": 11,
+        "price": 20.0,
+        "image": "RODENTG3.jpg ,RODENTG32.jpg"
+    },
+    {
+        "id": 14,
+        "name": "Zoom H1",
+        "description": "Zoom H1 je kompaktni digitalni audio snimac koji omogucava visokokvalitetno snimanje zvuka u razlicitim situacijama. Opremljen je stereo XY mikrofonima koji pružaju jasan i precizan zvuk sa minimalnom distorzijom i širokim dinamickim opsegom. Sa podrškom za snimanje u MP3 i WAV formatima, pruža razlicite opcije kvaliteta snimanja prilagodene potrebama korisnika. Zoom H1 je jednostavan za upotrebu, sa intuitivnim kontrolama i LCD ekranom koji omogucava laku navigaciju kroz menije i pregled snimljenog materijala. Zahvaljujuci svojoj prenosivosti i visokom kvalitetu snimanja, pogodan je za razlicite namene, ukljucujuci snimanje intervjua, muzike, podcastova i ambijentalnih zvukova. Sa svojim kompaktnim dizajnom, Zoom H1 je lako prenosiv i pogodan za upotrebu u pokretu. Bez obzira da li ste profesionalni snimatelj, novinar ili hobista u audio produkciji, Zoom H1 pruža pouzdano i kvalitetno rešenje za snimanje zvuka u razlicitim situacijama.",
+        "categoryId": 9,
+        "price": 10.0,
+        "image": "zoomh1.jpg"
+    },
+    {
+        "id": 15,
+        "name": "RODE Micro",
+        "description": "RODE Micro je kompaktni mikrofon visokog kvaliteta, namenjen snimanju zvuka u razlicitim situacijama. Sa svojim malim dimenzijama i laganim dizajnom, idealan je za upotrebu u pokretu. Ovaj mikrofon poseduje kardioidnu karakteristiku usmerenja, što znaci da efikasno fokusira snimanje na izvor zvuka ispred njega, dok istovremeno smanjuje neželjene zvukove sa strane i pozadi. To omogucava jasan i cist snimak zvuka, bez nepotrebnih smetnji. RODE Micro je takode opremljen visokokvalitetnim mikrofonskim kapsulama koje pružaju izuzetnu jasnocu i preciznost u reprodukciji zvuka. Sa svojim univerzalnim prikljuckom, ovaj mikrofon se lako može koristiti sa razlicitim uredajima kao što su kamere, mobilni telefoni, tableti i druge audio uredaje. Bilo da se koristi za snimanje intervjua, podcastova, vlogova, muzike ili ambijentalnih zvukova, RODE Micro je pouzdan alat koji pruža visokokvalitetne rezultate. Sa svojom jednostavnošcu korišcenja i kompaktnim dizajnom, ovo je mikrofon koji ce zadovoljiti potrebe kako profesionalnih korisnika, tako i hobista u svetu audio produkcije.",
+        "categoryId": 11,
+        "price": 10.0,
+        "image": "RODEMicro.jpg"
+    },
+    {
+        "id": 17,
+        "name": "Sony A74",
+        "description": "Sony A7IV je visokokvalitetna digitalna kamera koja pruža izuzetne performanse u fotografiji i videografiji. Opremljena je naprednim senzorom punog formata visoke rezolucije i brzim procesorom slike, što omogucava snimanje izuzetno detaljnih fotografija i visokokvalitetnih videa. Sa velikim dinamickim opsegom i širokim rasponom ISO vrednosti, A7IV je sposoban da snimi izvanredne slike cak i u zahtevnim svetlosnim uslovima. Kamera poseduje napredni sistem automatskog fokusa sa velikim brojem tacaka detekcije faznog autofokusa, koji omogucava brzo i precizno fokusiranje subjekata u kadru. Osim toga, A7IV ima niz funkcija i opcija prilagodenih kako profesionalnim fotografima, tako i entuzijastima, ukljucujuci visoku brzinu snimanja, mogucnost snimanja 4K videa visoke rezolucije, bežicno povezivanje i intuitivni korisnicki interfejs. Sa svojim kompaktnim dizajnom i izdržljivom konstrukcijom, Sony A7IV je idealan izbor za sve koji žele visokokvalitetne rezultate u fotografiji i videografiji, bez obzira na njihov nivo iskustva i profesionalnosti.",
+        "categoryId": 3,
+        "price": 50.0,
+        "image": "Sonya7.jpg"
+    },
+    {
+        "id": 23,
+        "name": "Sigma 24-70 2.8 ff",
+        "description": "Sigma 24-70mm f/2.8 DG DN Art je visoko kvalitetni standardni zoom objektiv namenjen full-frame (FF) digitalnim kamerama. Sa svojim širokim rasponom od 24mm do 70mm, pruža svestrano pokrivanje za širok spektar fotografija, ukljucujuci pejzaže, portrete, street fotografiju i još mnogo toga. Objektiv ima konstantni maksimalni otvor blende od f/2.8, što ga cini izuzetno pogodnim za snimanje u uslovima slabog osvetljenja i omogucava stvaranje atraktivnog zamucenja pozadine (bokeh efekta) pri portretnom snimanju. Sa svojim optickim dizajnom visoke kvalitete, ukljucujuci posebne elemente sa niskom disperzijom stakla, ovaj objektiv pruža oštru i detaljnu sliku sa minimalnom distorzijom i aberacijom. Sigma 24-70mm f/2.8 DG DN Art takode ima brz i precizan autofokus, kao i mogucnost rucnog podešavanja fokusa. Opremljen je i vodootpornom i prašinootpornom konstrukcijom, što ga cini pogodnim za snimanje u razlicitim uslovima. Sa svojom kombinacijom visokih performansi, svestranosti i izdržljivosti, ovaj objektiv je odlican izbor za profesionalne fotografe i entuzijaste koji traže vrhunski standardni zoom objektiv za svoje full-frame kamere.",
+        "categoryId": 14,
+        "price": 20.0,
+        "image": "SIGMA24-70mmobjektiv.jpg ,SIGMA24-70mmobjektiv1.jpg ,SIGMA24-70mmobjektiv2.jpg"
+    },
+    {
+        "id": 24,
+        "name": "Canon FD 50mm f1.4 ff",
+        "description": "Canon FD 50mm f/1.4 FF je klasicni socni objektiv širokog otvora blende, koji se može adaptirati na razlicite moderne digitalne kamere putem odgovarajuceg adaptera. Sa fiksnom žižnom daljinom od 50mm, ovaj objektiv pruža prirodno vidno polje, cineci ga izuzetno pogodnim za portrete, street fotografiju, fotografisanje u slabim svetlosnim uslovima i stvaranje efektnog zamucenja pozadine (bokeh efekat). Maksimalni otvor blende od f/1.4 omogucava veliku kolicinu svetlosti da dospe do senzora, što rezultira svetlim i oštrim slikama cak i pri smanjenom osvetljenju. Opticki dizajn ovog objektiva, ukljucujuci višestruke premaze i specijalne elemente stakla, obezbeduje oštrinu i kontrastnost slike, uz minimiziranje aberacije i distorzije. Rucni fokus omogucava preciznu kontrolu nad fokusiranjem, dok metalna konstrukcija cini objektiv izdržljivim i pouzdanim. Sposobnost adaptacije ovog objektiva na moderne digitalne kamere omogucava korisnicima da iskoriste njegovu izuzetnu opticku performansu i karakteristicni estetski izgled Canonovih vintage objektiva, bez obzira na vrstu kamere koju koriste.",
+        "categoryId": 14,
+        "price": 10.0,
+        "image": "CanonFD50mmf1.4.jpg"
+    },
+    {
+        "id": 25,
+        "name": "Sigma 16mm 1.4 crop (19mm na ff)",
+        "description": "Sigma 16mm f/1.4 DC DN Contemporary je širokougaoni objektiv namenjen digitalnim kamerama sa senzorom APS-C formata. Sa svojim fiksnim žižnim daljinama od 16mm(24mm fullframe eqvivalent) i velikim maksimalnim otvorom blende od f/1.4, ovaj objektiv pruža izvanredne mogucnosti za snimanje u uslovima slabog osvetljenja i stvaranje efektnog zamucenja pozadine (bokeh efekta). Ima široko vidno polje, što ga cini idealnim za pejzažnu, astrofotografiju, street fotografiju i snimanje video sadržaja. Posebno je dizajniran za korisnike digitalnih kamera sa senzorima APS-C formata, pružajuci izuzetnu oštrinu i detalje u celom kadru. Važno je napomenuti da, kada se ovaj objektiv koristi sa kamerama koje imaju full-frame senzor pruža  vidno polje od približno 19mm(full frame eqvivalent). Sa brzim i preciznim autofokusom, kao i mogucnošcu rucnog fokusa, omogucava korisnicima da lako uhvate i oštrinu i detalje u svakom kadru. Sa svojom kompaktnom konstrukcijom i laganom težinom, Sigma 16mm f/1.4 pruža izvanrednu portabilnost i prakticnost, cineci ga idealnim izborom za fotografe i videografe koji traže visokokvalitetne rezultate u razlicitim situacijama snimanja.",
+        "categoryId": 14,
+        "price": 20.0,
+        "image": "Sigma16mm1.4crop(19mm na ff).jpg ,Sigma16mm1.4crop(19mm na ff)2.jpg"
+    },
+    {
+        "id": 27,
+        "name": "Referentni monitor feelworld LUT6 (sa cage-om)",
+        "description": "Referentni monitor Feelworld LUT6 je visokokvalitetni monitor namenjen profesionalnoj video produkciji. Sa ekranom dijagonale 6 inca, pruža oštru i detaljnu sliku visoke rezolucije za precizno fokusiranje i ocenu kompozicije. Opremljen tehnologijom LUT (Look-Up Table) za preciznije prikazivanje boja, korisnici mogu primeniti razlicite predefinisane kolorne profile ili kreirati sopstvene. Cage (okvir) omogucava jednostavno montiranje na kameru ili rig za stabilnost i fleksibilnost tokom snimanja na terenu. Monitor ima razlicite ulaze poput HDMI, što ga cini kompatibilnim sa širokim spektrom video opreme. Takode, sadrži funkcije poput zuma, fokus peaking-a i histograma za precizno podešavanje slike tokom snimanja. Sa visokom svetlinom i širokim uglovima gledanja, Feelworld LUT6 je idealan alat za profesionalce u video produkciji koji zahtevaju pouzdan monitor za pracenje i ocenu snimljenog materijala u realnom vremenu.",
+        "categoryId": 4,
+        "price": 30.0,
+        "image": "ReferentnimonitorfeelworldLUT6.jpg"
+    },
+    { "id": 31, "name": "Godox sl-60w", "description": "LED svetlo sa mogucnošcu podešavanja  jacine svetla.", "categoryId": 5, "price": 10.0, "image": "GodoxSL60w.jpg" },
+    {
+        "id": 32,
+        "name": "Godox vl 150",
+        "description": "Godox VL150 je LED svetlosna glava koja pruža visokokvalitetno osvetljenje u profesionalnim foto i video produkcijama. Sa svojim snažnim LED svetlom, VL150 omogucava ravnomerno i konzistentno osvetljenje sa preciznom temperaturom boje od 5600K, što je idealno za portrete, intervjuje, proizvodne fotografije i snimanje filmova. Ova svetlosna glava je kompaktna i lako prenosiva, što je cini pogodnom za snimanje na terenu. Takode, VL150 poseduje mogucnost podešavanja jacine osvetljenja i temperaturnog opsega boja, pružajuci korisnicima potpunu kontrolu nad osvetljenjem u skladu sa njihovim potrebama. Sa visokim CRI (Color Rendering Index) od preko 95, VL150 reprodukuje boje precizno i verodostojno, što rezultira profesionalnim kvalitetom slike. Opremljen je i tihim ventilatorom za hladenje, što osigurava stabilan rad cak i pri dugotrajnom korišcenju. Godox VL150 je odlican izbor za profesionalce u fotografiji i videografiji koji zahtevaju visokokvalitetno, prilagodljivo i pouzdano osvetljenje za svoje projekte.",
+        "categoryId": 5,
+        "price": 20.0,
+        "image": "Godoxvl150.jpg ,Godoxvl1502.jpg"
+    },
+    { "id": 33, "name": "Softbox godox 120cm", "description": "Veliki softbox za difuziju svetla.", "categoryId": 5, "price": 10.0, "image": "softboxgodox120cmi90cm.jpg" },
+    { "id": 34, "name": "Softbox godox 90cm", "description": "Manji softbox za difuziju svetla.", "categoryId": 5, "price": 10.0, "image": "softboxgodox120cmi90cm.jpg" },
+    { "id": 36, "name": "C stand sa boom-om", "description": "Stativ za postavljanje svetla sa mogucnošcu povezivanja boom-a.", "categoryId": 5, "price": 15.0, "image": "Cstandsaboomom.jpg" },
+    { "id": 37, "name": "Stalak za rasvetu (3m)", "description": "Visoki stalak za postavljanje svetla.", "categoryId": 5, "price": 10.0, "image": "Stalakzarasvetu(3m).jpg" },
+    {
+        "id": 42,
+        "name": "DOLLY",
+        "description": "Dolly je neizostavan alat u filmskoj produkciji koji omogucava stabilno kretanje kamere ili osvetljenja. Ovaj dolly je izraden od cvrstog drveta sa gvozdenim ramom, što garantuje pouzdanost i sigurnost tokom snimanja. Veliki tockovi omogucavaju glatko klizanje po podlozi, smanjujuci vibracije i osiguravajuci ravnomerno kretanje. Dodatni pragovi na dolly-u pružaju mogucnost montiranja dodatne opreme za kamere ili osvetljenje, povecavajuci fleksibilnost i funkcionalnost. Takode, dolly poseduje pokretnu zadnju osovinu koja omogucava skretanje, cime se povecava preciznost i kontrola pokreta tokom snimanja. Ova karakteristika je kljucna za postizanje dinamicnih kadrova i savladavanje zahtevnih manevra. Dolly predstavlja pouzdan i svestran alat u filmskoj produkciji, omogucavajuci filmskim stvaraocima da ostvare svoje zamisli sa profesionalnim kretanjem i stabilnošcu.",
+        "categoryId": 7,
+        "price": 30.0,
+        "image": null
+    },
+    {
+        "id": 46,
+        "name": "Shoulder rig lanparte sa mehanickim sarfom",
+        "description": "Shoulder rig Lanparte sa mehanickim sarfom je profesionalni set opreme koji omogucava stabilno držanje kamere prilikom snimanja. Ovaj rig je dizajniran da pruži udobnost i stabilnost tokom dugih snimanja, posebno prilikom snimanja pokretnih kadrova ili u uslovima kada je potrebna mobilnost. Ovaj rig poseduje i rameni oslonac i ergonomski dizajniran držac za ruke, što dodatno doprinosi udobnosti i stabilnosti tokom korišcenja.. Shoulder rig je nezamenjiv alat za filmske stvaraoce koji žele da postignu profesionalne rezultate sa stabilnim i udobnim držanjem kamere tokom snimanja.",
+        "categoryId": 7,
+        "price": 30.0,
+        "image": "Shoulderriglanpartesamehanickim.jpg ,Shoulderriglanpartesamehanickim2.jpg"
+    },
+    {
+        "id": 47,
+        "name": "Zhiyun crane 2 gimbal",
+        "description": "Zhiyun Crane 2 je napredni gimbal za stabilizaciju kamere koji omogucava fluidno i stabilno snimanje pokretnih kadrova. Ovaj gimbal je namenjen korisnicima koji žele da postignu profesionalne rezultate u video produkciji, bez podrhtavanja i vibracija. Crane 2 podržava širok spektar DSLR i mirrorless kamera, pružajuci izuzetnu kompatibilnost. Glavna karakteristika ovog gimbala je njegova visoka nosivost, koja omogucava stabilno držanje i kretanje kamera sa težinom do 3.2 kilograma. Takode, Crane 2 poseduje napredne funkcije kao što su follow focus sistem, OLED displej za pracenje podešavanja, i mogucnost kontrole kamere putem integriranog kontrolera. Ovaj gimbal takode ima dugotrajnu bateriju koja omogucava dugotrajno snimanje bez potrebe za cestim punjenjem. Sa svojom robustnom konstrukcijom i intuitivnim dizajnom, Zhiyun Crane 2 je idealan alat za profesionalce u filmskoj produkciji koji zahtevaju stabilne i profesionalne snimke.",
+        "categoryId": 7,
+        "price": 30.0,
+        "image": "ZhiynCrane2gimbal.jpg ,ZhiynCrane2gimbal2.jpg"
+    },
+    { "id": 48, "name": "Variable ND fitler 2-400 67mm", "description": "Varijabilni neutralni filter za kontrolu kolicine svetla koje ulazi u objektiv.", "categoryId": 8, "price": 5.0, "image": "NDFilter.jpg" },
+    { "id": 49, "name": "Polarizing filter 67mm", "description": "Polarizacioni filter za smanjenje refleksija i poboljšanje kontrasta.", "categoryId": 8, "price": 5.0, "image": "Polarizingfilter67mm.jpg" },
+    {
+        "id": 50,
+        "name": "Godox TL 60 tube Rgb light",
+        "description": "Godox TL60 Tube RGB Light je svestrano osvetljenje koje pruža širok spektar boja i efekata za razlicite potrebe u fotografiji i videografiji. Sa svojim cilindricnim dizajnom, ovaj tube light je lagan, prenosiv i lako se montira na razlicite površine. Glavna karakteristika ovog svetla je mogucnost emitovanja razlicitih boja i nijansi zahvaljujuci RGB diodama, što omogucava korisnicima da prilagode osvetljenje u skladu sa atmosferom ili estetikom snimka. Pored toga, TL60 Tube Light takode ima mogucnost podešavanja temperature boje i jacine svetla, pružajuci dodatnu fleksibilnost prilikom snimanja. Ovaj tube light takode podržava razlicite efekte poput bljeska, pulsiranja i prelaza boja, što omogucava kreativno eksperimentisanje sa osvetljenjem. Sa svojom dugotrajnom baterijom, jednostavnim upravljanjem preko integrisanog displeja, daljinskog upravljaca ili aplikacije Godox TL60 Tube RGB Light je idealno rešenje za sve koji žele da unaprede svoje fotografije i video zapise sa dinamicnim i atraktivnim osvetljenjem.",
+        "categoryId": 5,
+        "price": 30.0,
+        "image": "GodoxTL60tubeRgblight.jpg"
+    },
+    {
+        "id": 51,
+        "name": "Dracast 30W",
+        "description": "Dracast 30W je kompaktno LED osvetljenje visokog kvaliteta, koje se može napajati putem V-mount baterija, pružajuci dodatnu fleksibilnost prilikom korišcenja. Sa snagom od 30W, ovaj panel pruža snažno i ravnomerno osvetljenje, idealno za razlicite vrste fotografija i video snimanja. Glavna karakteristika ovog osvetljenja je njegova kompaktna velicina i lakoca, što ga cini lako prenosivim i pogodnim za rad na terenu. Pored toga, Dracast 30W omogucava podešavanje temperature boje i jacine svetla, što korisnicima omogucava prilagodavanje osvetljenja prema svojim potrebama. Visok CRI (Color Rendering Index) osigurava precizan prikaz boja, dok dugotrajna baterija i jednostavne kontrole cine ovaj panel pouzdanim izborom za profesionalnu upotrebu.",
+        "categoryId": 5,
+        "price": 15.0,
+        "image": "Dracast30W.jpg"
+    },
+    { "id": 52, "name": "Kaciga za kameru", "description": null, "categoryId": 7, "price": 10.0, "image": null },
+    { "id": 53, "name": "Objektiv Canon 200mm f4", "description": null, "categoryId": 14, "price": 10.0, "image": null },
+    { "id": 54, "name": "1st AC bag kit", "description": null, "categoryId": 8, "price": 20.0, "image": null },
+    { "id": 55, "name": "Godox V 860 II ttI", "description": null, "categoryId": 8, "price": 15.0, "image": "GODOXV860IIttI.jpg ,GODOXV860IIttI2.jpg" },
+    { "id": 56, "name": "Godox dome Softbox 95cm", "description": null, "categoryId": 5, "price": 10.0, "image": null },
+    { "id": 57, "name": "Softbox kvadrat 60x60cm", "description": null, "categoryId": 5, "price": 10.0, "image": "GODOXSoftbox60x60.jpg ,GODOXSoftbox60x602.jpg" },
+    {
+        "id": 62,
+        "name": "Sekonic L-758DR DIGITAL MASTER",
+        "description": "Sekonic L-758DR DIGITAL MASTER je sofisticirani digitalni ekspozimetar dizajniran za precizno merenje svetlosti u fotografiji i filmu. Ovaj uredaj omogucava fotografima da tacno procene ekspoziciju i postignu željene efekte u svojim fotografijama. Glavna karakteristika L-758DR je njegova sposobnost merenja ambijentalne svetlosti, bljeska i blica, pružajuci sveobuhvatnu procenu svetlosnih uslova. Uredaj poseduje širok opseg merenja i visoku preciznost, što garantuje pouzdane rezultate cak i u zahtevnim situacijama. Pored toga, L-758DR ima mogucnost cuvanja i upravljanja podacima o ekspoziciji za više scena ili postavki, olakšavajuci rad sa više razlicitih svetlosnih uslova. Intuitivno korisnicko sucelje i pregledan ekran omogucavaju jednostavno korišcenje i brzo postizanje željenih postavki. Sa svojom kompaktnom velicinom i dugotrajnom baterijom, Sekonic L-758DR DIGITAL MASTER je nezamenjiv alat za profesionalne fotografe i videografe koji žele da postignu preciznu ekspoziciju i kvalitetne rezultate u svojim videima i fotografijama.",
+        "categoryId": 8,
+        "price": 40.0,
+        "image": null
+    }
 ]

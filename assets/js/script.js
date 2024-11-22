@@ -1,4 +1,3 @@
-console.log(window.location.pathname);
 window.onload = function(){
     AOS.init();
     printFooter();
@@ -123,7 +122,6 @@ window.onload = function(){
     }
     if (window.location.pathname == "/22rental/categories.html"){
         ajaxCallBack("assets/data/categories.json", "get", "", function(result){
-            console.log(result);
             let html = "";
             for(let i of result){
                 if(i.parent == null){
@@ -145,7 +143,7 @@ window.onload = function(){
             $("#printCategories").html(html);
         });
     }
-    if (window.location.pathname == "/items.html"){
+    if (window.location.pathname == "/22rental/items.html"){
         ajaxCallBack("assets/data/categories.json", "get", "", function(result){
             let urlParams = new URLSearchParams(window.location.search);
             let myParam = urlParams.get('category');
@@ -154,12 +152,11 @@ window.onload = function(){
             }
             let title = result.filter(x => x.id == myParam)
             $("#getSubCat").html(title[0].name);
-            console.log(title);
             localStorage.setItem("selectedCategory", myParam);
             printItemData();
         });
     }
-    if (window.location.pathname == "/subcategories.html"){
+    if (window.location.pathname == "/22rental/subcategories.html"){
         ajaxCallBack("assets/data/categories.json", "get", "", function(result){
             let urlParams = new URLSearchParams(window.location.search);
             let myParam = urlParams.get('category');
@@ -189,7 +186,7 @@ window.onload = function(){
             $('#printSubCats').html(html);
         });
     }
-    if (window.location.pathname == "/search.html"){
+    if (window.location.pathname == "/22rental/search.html"){
         let urlParams = new URLSearchParams(window.location.search);
         let myParam = urlParams.get('searchParam');
         $('#searchTitle').html(`<h1>Oprema pretrazena sa "${myParam}"</h1>`);
@@ -253,7 +250,6 @@ function printItemData(){
             let checkId = $(this).data("id");
             let checkArray = JSON.parse(localStorage.getItem("items"));
             let printItem = checkArray.filter(x => x.id == checkId);
-            console.log();
             itemPrint(printItem[0]);
             $("#itemShow").animate({
                 height: 'toggle'
@@ -291,7 +287,7 @@ function itemPrint(data){
       <div class="col-12 col-lg-6 p-5 box">
         <h2>${data.name}</h2>
         <h5>${data.price} € / dan</h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, tenetur aspernatur? Nisi officiis autem tempora doloremque, minus odit assumenda consequatur quidem laborum, error, minima veritatis provident ex et reprehenderit. Minima.</p>
+        <p>${printDescription(data.description)}</p>
       </div>
     </div>`;
     $("#itemShow").html(html);
@@ -315,14 +311,24 @@ function itemPrint(data){
     $("#iksic").click(function(){
         $("#itemShow").animate({
             height: 'toggle'
-          });
+        });
     });
+}
+function printDescription(description){
+    let html = "";
+    if(description != null){
+        html = description;
+        if(description.length > 50){
+
+            html = description.split(' ').slice(0, 25).join(' ');
+        }
+    }
+    return html;
 }
 function showBoxItems(){
     const boxes = document.querySelectorAll(".box");
     let delay = 0;
     boxes.forEach((box, index) => {
-        
         setTimeout(() => {
             box.style.opacity = 1;
         }, delay);

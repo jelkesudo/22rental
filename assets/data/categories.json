@@ -10,5 +10,7 @@
     { "id": 11, "name": "Mikrofoni", "parent": 2 },
     { "id": 12, "name": "Bubice", "parent": 2 },
     { "id": 13, "name": "Torba", "parent": 2 },
-    { "id": 14, "name": "Optika", "parent": 1 }
+    { "id": 14, "name": "Optika", "parent": 1 },
+    { "id": 1014, "name": "Slušalice", "parent": 2 },
+    { "id": 1015, "name": "Šarfovi", "parent": 1 }
 ]
